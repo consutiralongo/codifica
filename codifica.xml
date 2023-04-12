@@ -1,0 +1,1287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stile.xsl"?>
+<!DOCTYPE TEI SYSTEM "tei_all.dtd">
+<!--Prologo-->
+<!--Body-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="fr">Morphologie</title>
+                <title type="full">
+                    <title type="main" xml:lang="it">Morfologia</title>
+                    <title type="sub" xml:lang="it">
+                  Note preparatorie per lezioni (
+                        <date when="1893-1895">1893-1895</date>
+                  )
+                    </title>
+                </title>
+                <author ref="FDS">Ferdinand De Saussure</author>
+                <respStmt>
+                    <resp>Traduzione italiana e commento a cura di</resp>
+                    <name ref="EF">Emanuele Fadda</name>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <edition>
+               Edizione Digitale
+                    <date when="04-2023">Aprile 2023</date>
+                </edition>
+                <respStmt>
+                    <resp>Progetto coordinato da:</resp>
+                    <name xml:id="AMD">Angelo Mario Del Grosso</name>
+                </respStmt>
+                <respStmt>
+                    <resp>Codifica a cura di:</resp>
+                    <name xml:id="MT">Mariaconsuelo Tiralongo</name>
+                </respStmt>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>Università di Pisa</publisher>
+                <pubPlace>Pisa</pubPlace>
+                <availability status="free">
+                    <p>Opera ad accesso libero</p>
+                </availability>
+                <date when="2023">2023</date>
+            </publicationStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <country key="CH">Switzerland</country>
+                        <settlement>Ginevra</settlement>
+                        <repository role="library">
+                     Biblioteca di
+                            <placeName>Ginevra</placeName>
+                        </repository>
+                        <idno>BGE Ms. fr. 3951/7</idno>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <author xml:lang="fr">
+                                <persName ref="FDS">Ferdinand De Saussure</persName>
+                            </author>
+                            <title xml:lang="fr">Morphologie</title>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc form="folio">
+                            <supportDesc material="paper">
+                                <support>Fogli di carta.</support>
+                                <extent>19 foglietti</extent>
+                                <condition>Le pagine sono in buone condizioni, ben leggibili e non si evidenziano particolari danni.</condition>
+                            </supportDesc>
+                            <layoutDesc>
+                                <layout columns="1" ruledLines="20 30">
+                                    <p>Le pagine hanno in media dalle 20 alle 30 righe. Sono presenti alcune note a margine e al di sopra del testo e qualche cancellazione.</p>
+                                </layout>
+                            </layoutDesc>
+                        </objectDesc>
+                        <handDesc hands="1">
+                            <p>Il testo è stato scritto interamente dall'autore.</p>
+                        </handDesc>
+                        <typeDesc>
+                            <p>Nella versione in bella sono presenti poche cancellature e correzioni ed 
+                            è ben visibile un problema di articolazione interna nella numerazione delle pagine.</p>
+                        </typeDesc>
+                    </physDesc>
+                    <history>
+                        <origin notAfter="1895">
+                            <p>Lezioni destinate a studenti. 
+                                Testo preparatorio per almeno tre lezioni (la terza è indicata da S. ai paragrafi 5 e 6).
+                                La data non è indicata nel documento. Si suppone, dati i corsi di Saussure e il contenuto, 
+                                che queste lezioni siano del periodo tra il 1893-94, ma potrebbero anche appartenere al periodo che va dal 1894-95.
+                                Sono presenti due versioni una in brutta nelle pagine 25-33 del corrente manoscritto e una bella versione ricopiata e ordinata da De Saussure (pag.1-24).</p>
+                        </origin>
+                        <acquisition>
+                            <p>
+                        Il testo originale venne in seguito acquisito dalla Biblioteca di
+                                <placeName ref="#ginevra">Ginevra</placeName>
+                        .
+                            </p>
+                        </acquisition>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <langUsage>
+                <language ident="fr">Francese</language>
+            </langUsage>
+            <settingDesc>
+                <setting>
+                    <name>
+                     Testi registrati nella Biblioteca di
+                        <placeName>Ginevra</placeName>
+                     ,
+                        <country>Svizzera</country>
+                     .
+                    </name>
+                    <time>
+                        <date when="1893-1895">Tra il 1893-1895</date>
+                    </time>
+                </setting>
+            </settingDesc>
+        </profileDesc>
+
+    </teiHeader>
+    <facsimile>
+        <!--Pagina18-->
+        <surface n="1" xml:id="pag18">
+            <graphic url="pag18.jpg" width="3959.6px" height="6048.6px" />
+            <zone ulx="1021" uly="370" lrx="3689" lry="5622" xml:id="P18Intera" />
+            <zone ulx="1100" uly="398" lrx="3602" lry="601" xml:id="riga1p18" />
+            <zone ulx="1118" uly="568" lrx="3270" lry="696" xml:id="riga2p18" />
+            <zone ulx="1045" uly="762" lrx="3507" lry="890" xml:id="riga3p18" />
+            <zone ulx="866" uly="915" lrx="3647" lry="1043" xml:id="riga4p18" />
+            <zone ulx="933" uly="1090" lrx="3651" lry="1205" xml:id="riga5p18" />
+            <zone ulx="894" uly="1250" lrx="3495" lry="1330" xml:id="riga6p18" />
+            <zone ulx="867" uly="1387" lrx="3612" lry="1499" xml:id="riga7p18" />
+            <zone ulx="928" uly="1538" lrx="3626" lry="1686" xml:id="riga8p18" />
+            <zone ulx="1054" uly="1704" lrx="2923" lry="1856"  xml:id="riga9p18" />
+            <zone ulx="1435" uly="1887" lrx="2747" lry="1994" xml:id="riga10p18" />
+            <zone ulx="1062" uly="2112" lrx="3637" lry="2222" xml:id="riga11p18" />
+            <zone ulx="909" uly="2261" lrx="3266" lry="2379" xml:id="riga12p18" />
+            <zone ulx="1550" uly="2437" lrx="2685" lry="2573" xml:id="riga13p18" />
+            <zone ulx="1565" uly="2616" lrx="3517" lry="2749" xml:id="riga14p18" />
+            <zone ulx="1080" uly="2818" lrx="3667" lry="2963" xml:id="riga15p18" />
+            <zone ulx="930" uly="3027" lrx="3662" lry="3186" xml:id="riga16p18" />
+            <zone ulx="1008" uly="3203" lrx="3643" lry="3315" xml:id="riga17p18" />
+            <zone ulx="1003" uly="3383" lrx="3659" lry="3506" xml:id="riga18p18" />
+            <zone ulx="1001" uly="3543" lrx="3640" lry="3679" xml:id="riga19p18" />
+            <zone ulx="1061" uly="3741" lrx="3557" lry="3875" xml:id="riga20p18" />
+            <zone ulx="1041" uly="3915" lrx="3596" lry="4024" xml:id="riga21p18" />
+            <zone ulx="1056" uly="4099" lrx="3658" lry="4229" xml:id="riga22p18" />
+            <zone ulx="1142" uly="4271" lrx="3518" lry="4375"  xml:id="riga23p18" />
+            <zone ulx="1137" uly="4471" lrx="3620" lry="4586" xml:id="riga24p18" />
+            <zone ulx="1040" uly="4648" lrx="3600" lry="4755" xml:id="riga25p18" />
+            <zone ulx="1080" uly="4831" lrx="3652" lry="4955" xml:id="riga26p18" />
+            <zone ulx="1132" uly="5026" lrx="3670" lry="5189" xml:id="riga27p18" />
+            <zone ulx="1140" uly="5223" lrx="2212" lry="5319" xml:id="riga28p18" />
+            <zone ulx="1199" uly="5370" lrx="3634" lry="5465" xml:id="riga29p18" />
+            <zone ulx="2622" uly="5465" lrx="3637" lry="5555" xml:id="riga30p18" />
+        </surface>
+        <!--Pagina19-->
+        <surface n="2" xml:id="pag19">
+            <graphic url="pag19.jpg" width="4032.6px" height="6047.6px" />
+            <zone ulx="682" uly="460" lrx="3709" lry="5599" xml:id="P19Intera" />
+            <zone ulx="938" uly="522" lrx="3554" lry="684" xml:id="riga1p19" />
+            <zone ulx="986" uly="751" lrx="3517" lry="852" xml:id="riga2p19" />
+            <zone ulx="689" uly="952" lrx="3563" lry="1085" xml:id="riga3p19" />
+            <zone ulx="570" uly="1145" lrx="3574" lry="1258" xml:id="riga4p19" />
+            <zone ulx="1045" uly="1296" lrx="3636" lry="1453" xml:id="riga5p19" />
+            <zone ulx="1039" uly="1487" lrx="2148" lry="1643" xml:id="riga6p19" />
+            <zone ulx="1269" uly="1706" lrx="3451" lry="1830" xml:id="riga7p19" />
+            <zone ulx="882" uly="1903" lrx="3449" lry="2003" xml:id="riga8p19" />
+            <zone ulx="979" uly="2070" lrx="3408" lry="2184" xml:id="riga9p19" />
+            <zone ulx="1026" uly="2252" lrx="2581" lry="2353" xml:id="riga10p19" />
+            <zone ulx="1894" uly="2369" lrx="2554" lry="2530" xml:id="riga11p19" />
+            <zone ulx="1948" uly="2534" lrx="2581" lry="2728" xml:id="riga12p19" />
+            <zone ulx="976" uly="2768" lrx="3692" lry="2886" xml:id="riga13p19" />
+            <zone ulx="977" uly="2950" lrx="3721" lry="3062" xml:id="riga14p19" />
+            <zone ulx="1117" uly="3120" lrx="3668" lry="3251" xml:id="riga15p19" />
+            <zone ulx="1093" uly="3318" lrx="3510" lry="3425" xml:id="riga16p19" />
+            <zone ulx="1069" uly="3482" lrx="3527" lry="3626" xml:id="riga17p19" />
+            <zone ulx="1141" uly="3671" lrx="3611" lry="3762" xml:id="riga18p19" />
+            <zone ulx="1210" uly="3811" lrx="3613" lry="3938" xml:id="riga19p19" />
+            <zone ulx="1270" uly="4002" lrx="3558" lry="4099" xml:id="riga20p19" />
+            <zone ulx="1196" uly="4141" lrx="3478" lry="4286" xml:id="riga21p19" />
+            <zone ulx="1271" uly="4328" lrx="3554" lry="4481" xml:id="riga22p19" />
+            <zone ulx="588" uly="4534" lrx="3545" lry="4687" xml:id="riga23p19" />
+            <zone ulx="1198" uly="4702" lrx="3498" lry="4836" xml:id="riga24p19" />
+            <zone ulx="1272" uly="4876" lrx="3595" lry="5012" xml:id="riga25p19" />
+            <zone ulx="1234" uly="5026" lrx="3506" lry="5173" xml:id="riga26p19" />
+            <zone ulx="1298" uly="5198" lrx="3580" lry="5347" xml:id="riga27p19" />
+            <zone ulx="1354" uly="5377" lrx="3710" lry="5501" xml:id="riga28p19" />
+            <zone ulx="2351" uly="5485" lrx="3718" lry="5614" xml:id="riga29p19" />
+        </surface>
+    </facsimile>
+    <text xml:lang="fr" xml:id="pagina18" subtype="manuscript">
+        <body>
+            <div type="pagina" n="18">
+                <pb n="18" facs="#P18Intera" />
+                <ab type="pericope" n="1" xml:id="Pericope1_p18">
+                    <lb xml:id="riga1_peri1_pag18" n="1" facs="#riga1p18" />
+               En quoi consiste le                    <term ref="#changementmorphol"> changement
+                        <choice>
+                            <abbr>morpol</abbr>
+                            <expan>morp<ex>h</ex>ol<ex>ogique</ex>
+                            </expan>
+                        </choice>
+                    </term> qui
+                    <lb xml:id="riga2_peri1_pag18" n="2" facs="#riga2p18" />
+               s'accomplit d'<choice>
+                    <sic>1</sic>
+                    <corr resp="#EF">une</corr>
+                </choice>
+                <term ref="#époque">
+                    <choice>
+                        <abbr>époq<am>.</am>
+                        </abbr>
+                        <expan>époq<ex>ue</ex>
+                        </expan>
+                    </choice>
+                </term> 
+               à l'autre
+                <choice>
+                    <sic>:</sic>
+                    <corr resp="#EF">?</corr>
+                </choice>
+            </ab>
+            <ab type="pericope" n="2" xml:id="Pericope2_p18">
+                <lb xml:id="riga3_peri2_pag18" n="3" facs="#riga3p18" />
+               1°dans l'<term ref="#analyse">analyse</term>
+                <choice>
+                    <abbr>différ<am>.</am>
+                    </abbr>
+                    <expan>différ<ex>ente</ex>
+                    </expan>
+                </choice>
+               des mêmes
+                <lb xml:id="riga4_peri2_pag18" n="4" facs="#riga4p18" />
+                <term ref="#formes">formes</term>, ou la <term ref="#valeur">valeur</term>
+                <choice>
+                    <abbr>différ<am>.</am>
+                    </abbr>
+                    <expan>différ<ex>ente</ex>
+                    </expan>
+                </choice>
+               que la <term ref="#langue">langue</term>
+                <lb xml:id="riga5_peri2_pag18" n="5" facs="#riga5p18" />
+               leur attribue, ou le <term ref="#rapport">rapport</term>
+                <choice>
+                    <abbr>différ<am>.</am>
+                    </abbr>
+                    <expan>différ<ex>ente</ex>
+                    </expan>
+                </choice>
+               qu'elle
+                <lb xml:id="riga6_peri2_pag18" n="6" facs="#riga6p18" />
+               établit entre
+                <choice>
+                    <sic>elle</sic>
+                    <corr resp="#EF">elles</corr>
+                </choice>
+                <choice>
+                    <sic>;</sic>
+                    <corr resp="#EF">:</corr>
+                </choice>
+               tous <term ref="#faits">faits</term>  qui restent
+                <lb xml:id="riga7_peri2_pag18" n="7" facs="#riga7p18" />
+               dans le <term ref="#domaine">domaine</term>  purement
+                <choice>
+                    <sic>
+                        <gap reason="illegible" atLeast="4" atMost="6" unit="chars" />
+logique</sic>
+                    <corr resp="#EF">psychologique</corr>
+                </choice>,
+                <lb xml:id="riga8_peri2_pag18" n="8" facs="#riga8p18" />
+               mais n'en sont pas moins
+                <choice>
+                    <sic>d</sic>
+                    <corr resp="#EF">des</corr>
+                </choice>
+                <term ref="#faits">faits</term> positifs.
+            </ab>
+            <ab type="pericope" n="3" xml:id="Pericope3_p18">
+                <lb xml:id="riga9_peri3_pag18" n="9" facs="#riga9p18" />
+                <term ref="#exemple">
+                    <choice>
+                        <abbr> Ep <am>.</am>
+                        </abbr>
+                        <expan>E<ex>xem</ex>p<ex>le</ex>
+                        </expan>
+                    </choice>
+                </term>
+                <choice>
+                    <sic>.</sic>
+                    <corr resp="#EF">:</corr>
+                </choice>
+                <choice>
+                    <abbr> Epoq <am>.</am>
+                    </abbr>
+                    <expan xml:lang="it">Epoca</expan>
+                </choice>
+               I
+                <choice>
+                    <sic>.</sic>
+                    <corr resp="#EF" />
+                </choice>
+                <mentioned xml:lang="el">βέλεσ-σι</mentioned>
+                <lb xml:id="riga10_peri3_pag18" n="10" facs="#riga10p18" />
+                <choice>
+                    <abbr> Ep <am>.</am>
+                    </abbr>
+                    <expan xml:lang="it"> Ep<ex>oca</ex>
+                    </expan>
+                </choice>
+               II
+                <choice>
+                    <sic>.</sic>
+                    <corr resp="#EF" />
+                </choice>
+                <mentioned xml:lang="el">βέλ-εσσι</mentioned>
+                <lb xml:id="riga11_peri3_pag18" n="11" facs="#riga11p18" />
+               2°
+                <choice>
+                    <abbr>Ds</abbr>
+                    <expan> d<ex>an</ex>s </expan>
+                </choice>
+               la <term ref="#création">création</term>  de <term ref="#formes">formes</term>  nouvelles,
+                <lb xml:id="riga12_peri3_pag18" n="12" facs="#riga12p18" />
+                <term ref="#fait">fait</term> plus tangible, plus matériel :
+                <lb xml:id="riga13_peri3_pag18" n="13" facs="#riga13p18" />
+                <choice>
+                    <abbr> Ep <am>.</am>
+                    </abbr>
+                    <expan xml:lang="it"> Ep<ex>oca</ex>
+                    </expan>
+                </choice>
+               I
+                <choice>
+                    <sic>.</sic>
+                    <corr resp="#EF" />
+                </choice>
+                <mentioned xml:lang="el">θηρσί</mentioned>
+                <lb xml:id="riga14_peri3_pag18" n="14" facs="#riga14p18" />
+                <choice>
+                    <abbr> Ep <am>.</am>
+                    </abbr>
+                    <expan xml:lang="it"> Ep<ex>oca</ex>
+                    </expan>
+                </choice>
+               II
+                <choice>
+                    <sic>.</sic>
+                    <corr resp="#EF" />
+                </choice>
+                <mentioned xml:lang="el">θήρσσι</mentioned>
+               (                <choice>
+                    <abbr> créat <am>.</am>
+                    </abbr>
+                    <expan> créat<ex>ion</ex>
+                    </expan>
+                </choice>
+                <choice>
+                    <abbr> nouv<am>.</am>
+                    </abbr>
+                    <expan> nouv<ex>elle</ex>
+                    </expan>
+                </choice>)
+                <choice>
+                    <sic />
+                    <corr resp="#EF">.</corr>
+                </choice>
+            </ab>
+            <ab type="pericope" n="4" xml:id="Pericope4_p18">
+                <lb xml:id="riga15_peri4_pag18" n="15" facs="#riga15p18" />
+               Reprenons le
+                <choice>
+                    <sic>1er</sic>
+                    <corr resp="#EF">premier</corr>
+                </choice>
+                <term ref="#fait">fait</term> :
+                <choice>
+                    <sic>Le</sic>
+                    <corr resp="#EF">le</corr>
+                </choice>
+                <term ref="#changement">changement</term>
+                <lb xml:id="riga16_peri4_pag18" n="16" facs="#riga16p18" />
+               survenu
+                <choice>
+                    <sic>d</sic>
+                    <corr resp="#EF">dans</corr>
+                </choice>
+               l'<term>aperception</term>  de <mentioned xml:lang="el">βέλεσσι</mentioned> par
+                <lb xml:id="riga17_peri4_pag18" n="17" facs="#riga17p18" />
+                <choice>
+                    <sic>La</sic>
+                    <corr resp="#EF">la</corr>
+                </choice>
+                <term ref="#langue">
+                    <choice>
+                        <abbr>lgue</abbr>
+                        <expan>l<ex>an</ex>gue</expan>
+                    </choice>
+                </term>
+                <choice>
+                    <sic>,</sic>
+                    <corr resp="#EF" />
+                </choice>
+               resterait lettre close si nous en
+                <lb xml:id="riga18_peri4_pag18" n="18" facs="#riga18p18" />
+               cherchions la <term ref="#raison">raison</term>
+                <choice>
+                    <sic>d</sic>
+                    <corr resp="#EF">dans</corr>
+                </choice>
+               cette <term ref="#forme">forme</term>  elle- <choice>
+                <abbr>mê</abbr>
+                <expan>mê<ex>me</ex>
+                </expan>
+            </choice>.
+            <lb xml:id="riga19_peri4_pag18" n="19" facs="#riga19p18" />
+               Elle a sa <term ref="#source">source</term>
+            <choice>
+                <abbr> uniq <am>.</am>
+                </abbr>
+                <expan> uniq<ex>ue</ex>
+                </expan>
+            </choice>
+            <emph rend="underline">
+                <choice>
+                    <sic>Dans</sic>
+                    <corr resp="#EF">dans</corr>
+                </choice>
+                  les <term ref="#formes">formes</term>
+                <lb xml:id="riga20_peri4_pag18" n="20" facs="#riga20p18" />
+                  concurrentes
+            </emph>
+               , ainsi que
+            <choice>
+                <abbr>ns</abbr>
+                <expan> n<ex>ou</ex>s</expan>
+            </choice>
+               l'avons
+            <add place="above">déjà dit</add>
+            <del rend="overstrike">
+                <gap reason="illegible" quantity="2" unit="character" />
+            </del>
+               .
+        </ab>
+        <ab type="pericope" n="5" xml:id="Pericope5_p18">
+            <lb xml:id="riga21_peri5_pag18" n="21" facs="#riga21p18" />
+               Comme l'
+            <term ref="#élément">
+                <choice>                    
+                    <abbr> élém<am>.</am>
+                    </abbr>
+                    <expan>élém<ex>ent</ex>
+                    </expan>
+                </choice>
+            </term>-            <mentioned xml:lang="el" rend="underline">εσ</mentioned> - ne se retrouve
+            <lb xml:id="riga22_peri5_pag18" n="22" facs="#riga22p18" />
+               pas dans
+            <mentioned xml:lang="el">βέλει</mentioned> ,
+            <mentioned xml:lang="el">βελέων</mentioned>
+            <choice>
+                <sic />
+                <corr resp="#EF">,</corr>
+            </choice> etc
+            <choice>
+                <sic>...</sic>
+                <corr resp="#EF">.</corr>
+            </choice>
+            <choice>
+                <sic />
+                <corr resp="#EF">,</corr>
+            </choice> depuis
+            <lb xml:id="riga23_peri5_pag18" n="23" facs="#riga23p18" />
+            <choice>
+                <sic>La</sic>
+                <corr resp="#EF">la</corr>
+            </choice>
+               chute de l'
+            <emph rend="underline">s</emph> , la <term ref="#langue">langue</term>
+            <del rend="overstrike"> ne voit
+                <lb xml:id="riga24_peri5_pag18" n="24" facs="#riga24p18" />
+                  pt pas et ce
+                <gap reason="illegible" quantity="4" unit="character" />
+            </del>
+               n'a aucune indi
+            <lb xml:id="riga25_peri5_pag18" n="25" facs="#riga25p18" />
+               cation qui lui permette de couper
+            <lb xml:id="riga26_peri5_pag18" n="26" facs="#riga26p18" />
+            <mentioned xml:lang="el">βέλεσ-σι</mentioned>, et elle coupe
+            <choice>
+                <abbr>maint</abbr>
+                <expan> maint<ex>enant</ex>
+                </expan>
+            </choice>
+            <mentioned xml:lang="el">βέλ-εσσι</mentioned>.
+            <lb xml:id="riga27_peri5_pag18" n="27" facs="#riga27p18" />
+               Ainsi le <term ref="#mouvement">mouvement</term> ne s'est pas produit
+            <lb xml:id="riga28_peri5_pag18" n="28" facs="#riga28p18" />
+               entre <mentioned xml:lang="el">βέλεσ-σι</mentioned>
+            <lb xml:id="riga29_peri5_pag18" n="29" facs="#riga29p18" />
+            <choice>
+                <sic>N</sic>
+                <corr resp="#EF">et</corr>
+            </choice>
+            <mentioned xml:lang="el">βέλ-εσσι</mentioned>, ce qui serait
+            <choice>
+                <abbr>simplt</abbr>
+                <expan>simpl<ex>emen</ex>t</expan>
+            </choice>
+            <lb xml:id="riga30_peri5_pag18" n="30" facs="#riga30p18" />
+               absurde à
+            <choice>
+                <sic>Dire</sic>
+                <corr resp="#EF">dire</corr>
+            </choice> .
+        </ab>
+    </div>
+    <div type="pagina" n="19">
+        <pb n="19" facs="#P19Intera" />
+        <ab type="pericope" n="1" xml:id="Pericope1_p19">
+            <lb xml:id="riga1_peri1_pag19" n="1" facs="#riga1p19" />
+               Mais comme
+            <choice>
+                <abbr> tj <am>.</am>
+                </abbr>
+                <expan> t<ex>ou</ex>j<ex>ours</ex>
+                </expan>
+            </choice>
+               e <del rend="overtyped" resp="#FDS">
+            <gap reason="deleted" quantity="1" unit="character" />
+        </del> n
+        <term ref="#morphologie">
+            <choice>
+                <abbr> morpol <am>.</am>
+                </abbr>
+                <expan> morp<ex>h</ex>ol<ex>ogie</ex>
+                </expan>
+            </choice>
+        </term>
+        <choice>
+            <sic />
+            <corr resp="#EF">,</corr>
+        </choice>
+               le <term ref="#mouvement">mouvement</term>
+        <lb xml:id="riga2_peri1_pag19" n="2" facs="#riga2p19" />
+        <emph rend="underline">
+                  vient
+            <choice>
+                <sic>D</sic>
+                <corr resp="#EF">d</corr>
+            </choice>'à côté.
+        </emph>
+               Et nous retrouvons
+        <lb xml:id="riga3_peri1_pag19" n="3" facs="#riga3p19" />
+        <choice>
+            <sic>dse</sic>
+            <corr resp="#EF">donc</corr>
+        </choice>
+        <choice>
+            <sic>La</sic>
+            <corr resp="#EF">la</corr>
+        </choice>
+        <term ref="#conditionprimordiale"> condition primordiale </term>
+        <choice>
+            <sic>le</sic>
+            <corr resp="#EF">de</corr>
+        </choice>
+               toute
+        <lb xml:id="riga4_peri1_pag19" n="4" facs="#riga4p19" />
+        <term ref="#opérationmorphologique">
+            <choice>
+                <abbr> opérat<am>.</am>
+                </abbr>
+                <expan> opérat<ex>ion</ex>
+                </expan>
+            </choice>
+            <del rend="overstrike">
+                  cerestr
+                <gap reason="illegible" quantity="1" unit="character" />
+                  t
+            </del>
+            <choice>
+                <abbr>morpol</abbr>
+                <expan> morp<ex>h</ex>ol<ex>ogique</ex>
+                </expan>
+            </choice>
+        </term>. 
+                    Elle porte sur
+        <del rend="overstrike">une</del>
+        <lb xml:id="riga5_peri1_pag19" n="5" facs="#riga5p19" />
+        <choice>
+            <sic>La</sic>
+            <corr resp="#EF">la</corr>
+        </choice>
+               la <term ref="#diversité">diversité</term> ou sur le <term ref="#rapport">rapport</term>  des <term ref="#formes">formes</term>
+        <lb xml:id="riga6_peri1_pag19" n="6" facs="#riga6p19" />
+               simultanées.
+    </ab>
+    <ab type="pericope" n="2" xml:id="Pericope2_p19">
+        <lb xml:id="riga7_peri2_pag19" n="7" facs="#riga7p19" />
+               Reprenons le
+        <choice>
+            <sic>2e</sic>
+            <corr resp="#EF">deuxième</corr>
+        </choice>
+        <term ref="#fait">fait</term>, les cré<del rend="overtyped">ti</del>ations
+        <lb xml:id="riga8_peri2_pag19" n="8" facs="#riga8p19" />
+               nouvelles. Ici
+        <choice>
+            <sic>La</sic>
+            <corr resp="#EF">la</corr>
+        </choice>
+               chose est encore plus
+        <lb xml:id="riga9_peri2_pag19" n="9" facs="#riga9p19" />
+               évidente :
+        <choice>
+            <sic>Pas</sic>
+            <corr resp="#EF">pas</corr>
+        </choice>
+               question, n'est-ce pas
+        <lb xml:id="riga10_peri2_pag19" n="10" facs="#riga10p19" />
+               de mettre en <term ref="#relation">relation</term>
+        <lb xml:id="riga11_peri2_pag19" n="11" facs="#riga11p19" />
+        <mentioned xml:lang="el">θηρσί</mentioned>
+        <choice>
+            <sic />
+            <corr resp="#EF">,</corr>
+        </choice>
+        <lb xml:id="riga12_peri2_pag19" n="12" facs="#riga12p19" />
+        <mentioned xml:lang="el">θήρεσσι</mentioned>
+        <choice>
+            <sic />
+            <corr resp="#EF">.</corr>
+        </choice>
+        <lb xml:id="riga13_peri2_pag19" n="13" facs="#riga13p19" />
+        <del rend="overstrike">Se fait qui a ou</del>
+        <del rend="overtyped">l</del>
+        L' <term ref="#impulsionlinquistique">impulsion  
+        <choice>
+            <abbr>
+                     linguistiq
+                <am>.</am>
+            </abbr>
+            <expan>
+                     linguistiq
+                <ex>ue</ex>
+            </expan>
+        </choice>
+    </term>
+    <lb xml:id="riga14_peri2_pag19" n="14" facs="#riga14p19" />
+               qui a engendré
+    <mentioned xml:lang="el">θήρεσσι</mentioned>
+               vient
+    <choice>
+        <abbr>naturel</abbr>
+        <expan>
+                     naturel
+            <ex>lement</ex>
+        </expan>
+    </choice>
+    <lb xml:id="riga15_peri2_pag19" n="15" facs="#riga15p19" />
+    <emph rend="underline">
+        <choice>
+            <sic>D</sic>
+            <corr resp="#EF">d</corr>
+        </choice>'à côté
+    </emph>
+    <choice>
+        <sic>;</sic>
+        <corr resp="#EF">,</corr>
+    </choice>
+    <add place="margin">
+                  je répète le <term ref="#mot">mot</term>, de
+        <mentioned xml:lang="el">βέλεσσι</mentioned>
+                  , etc
+        <choice>
+            <sic>..</sic>
+            <corr resp="#EF">.</corr>
+        </choice>
+    </add>
+    <del rend="overstrike">
+                  c.à d. de <term ref="#formes">formes</term> connues 
+        <lb xml:id="riga16_peri2_pag19" n="16" facs="#riga16p19" />
+                  et familiers à celui des grees qui
+        <lb xml:id="riga17_peri2_pag19" n="17" facs="#riga17p19" />
+                  a le 1er risquì
+        <gap reason="illegible" quantity="1" unit="word" xml:lang="el" />
+                  , et non q
+    </del>
+</ab>
+<ab type="pericope" n="3" xml:id="Pericope3_p19">
+    <lb xml:id="riga18_peri2_pag19" n="18" facs="#riga18p19" />
+               Pour créer
+    <mentioned xml:lang="el">θήρεσσι</mentioned>
+    <choice>
+        <sic>,</sic>
+        <corr resp="#EF" />
+    </choice>
+               il fallait un
+    <lb xml:id="riga19_peri2_pag19" n="19" facs="#riga19p19" />
+    <term ref="#modèle"> modèle </term> ; or
+    <choice>
+        <sic />
+        <corr resp="#EF">,</corr>
+    </choice>
+    <choice>
+        <abbr>naturellet</abbr>
+        <expan>
+                     naturelle
+            <ex>men</ex>
+                     t
+        </expan>
+    </choice>
+    <choice>
+        <sic />
+        <corr resp="#EF">,</corr>
+    </choice>
+               ce <term ref="#modèle"> modèle </term>
+    <choice>
+        <sic>dit</sic>
+        <corr resp="#EF">devait</corr>
+    </choice>
+    <lb xml:id="riga20_peri2_pag19" n="20" facs="#riga20p19" />
+               être très connu
+    <del rend="overtyped">t</del>
+               de celui qui
+    <del rend="overstrike">le copiait</del>
+    <lb xml:id="riga21_peri2_pag19" n="21" facs="#riga21p19" />
+               lançait le <term ref="#néologisme"> néologisme </term>; c'est dire
+    <lb xml:id="riga22_peri2_pag19" n="22" facs="#riga22p19" />
+               que le <term ref="#fait">fait</term> s'
+    <choice>
+        <sic>es</sic>
+        <corr resp="#EF">est</corr>
+    </choice>
+               passé entre <term ref="#formes">formes</term>
+    <lb xml:id="riga23_peri2_pag19" n="23" facs="#riga23p19" />
+    <add place="margin">on ne peut plus</add>    
+    <del rend="overstrike">ou plus tant degré</del>
+               contemporaines
+    <choice>
+        <sic>;</sic>
+        <corr resp="#EF">,</corr>
+    </choice>
+    <lb xml:id="riga24_peri2_pag19" n="24" facs="#riga24p19" />
+    <del rend="overstrike">puis qu'elles etaient pronouncées par la
+        <lb xml:id="riga25_peri2_pag19" n="25" facs="#riga25p19" />
+               bruethe du même</del>
+               puisque l'<term ref="#association"> association </term>
+    <lb xml:id="riga26_peri2_pag19" n="26" facs="#riga26p19" />
+               s'est faite
+    <choice>
+        <sic>Dans</sic>
+        <corr resp="#EF">dans</corr>
+    </choice>
+    <choice>
+        <sic>Le</sic>
+        <corr resp="#EF">le</corr>
+    </choice>
+               cerveau
+    <choice>
+        <sic>Du</sic>
+        <corr resp="#EF">du</corr>
+    </choice>
+               même
+    <lb xml:id="riga27_peri2_pag19" n="27" facs="#riga27p19" />
+    <term ref="#individu">individu</term>
+    <del rend="overtyped">;</del>
+               , et qu'il n'a fallu
+    <choice>
+        <sic>même</sic>
+        <corr resp="#EF">môme</corr>
+    </choice>
+    <lb xml:id="riga28_peri2_pag19" n="28" facs="#riga28p19" />
+               qu'un quart
+    <choice>
+        <sic>d</sic>
+        <corr resp="#EF">de</corr>
+    </choice>
+               seconde
+    <choice>
+        <sic>perv</sic>
+        <corr resp="#EF">pour</corr>
+    </choice>
+               conclure
+    <lb xml:id="riga29_peri2_pag19" n="29" facs="#riga29p19" />
+    <choice>
+        <sic>d</sic>
+        <corr resp="#EF">de</corr>
+    </choice>
+    <mentioned xml:lang="el">βέλ-εσσι</mentioned>
+               à
+    <mentioned xml:lang="el">θήρ-εσσι</mentioned>
+    <choice>
+        <sic />
+        <corr resp="#EF">.</corr>
+    </choice>
+</ab>
+</div>
+<!-- Traduzione -->
+<div type="traduzionepag18">
+<ab n="1" corresp="#Pericope1_p18" xml:lang="it">
+               In che consiste il cambiamento morfologico che si compie da un’epoca all’altra?
+</ab>
+<ab n="2" corresp="#Pericope2_p18" xml:lang="it">
+                1° Nell’analisi differente delle stesse forme, o il differente valore che la lingua
+                attribuisce loro, o il differente rapporto che essa stabilisce tra loro: tutti fatti che restano
+                nel dominio puramente psicologico, ma non per questo sono fatti meno positivi.
+</ab>
+<ab n="3" corresp="#Pericope3_p18" xml:lang="it">
+                Esempio:Epoca I βέλεσ-σι
+                Epoca II βέλ-εσσι
+                2° Nella creazione di forme nuove, fatto più tangibile, più materiale:
+                Epoca I θηρσί
+                Epoca II θήρσσι (nuova creazione)
+</ab>
+<ab n="4" corresp="#Pericope4_p18" xml:lang="it">
+                Riprendiamo il primo fatto. Il cambiamento sopravvenuto nell’appercezione βέλεσσι da parte
+                della lingua resterebbe lettera morta se noi cercassimo ragione in quella forma stessa.
+                Ha la propria fonte unicamente nelle forme concorrenti come abbiamo già detto.
+</ab>
+<ab n="5" corresp="#Pericope5_p18" xml:lang="it">
+                Poiché l’elemento -εσ- non si ritrova in βέλει, βελέων, ecc. dopo la caduta della s, la lingua
+                non ha alcuna indicazione che permetta di tagliare βέλεσ-σι e taglia adesso βέλ-εσσι,
+                il che sarebbe semplicemente assurdo a dirsi.
+</ab>
+</div>
+
+<div type="traduzionepag19">
+<ab n="1" corresp="#Pericope1_p19" xml:lang="it">
+                Ma come sempre in morfologia, il movimento viene da ciò che è lì accanto. E ritroviamo
+                dunque la condizione primordiale di ogni operazione morfologica. Essa concerne 
+                la diversità o il rapporto di forme simultanee.
+</ab>
+<ab n="2" corresp="#Pericope2_p19" xml:lang="it">
+                Riprendiamo il secondo fatto, le creazioni nuove. Qui, la cosa è ancor più evidente: 
+                Non si tratta minimamente di mettere in relazione θηρσί, θήρεσσι.
+                L’Impulsione linguistica che ha generato θήρεσσι viene naturalmente
+                da ciò che lì accanto, ripeto l’espressione βέλεσσι, ecc.
+
+</ab>
+<ab n="3" corresp="#Pericope3_p19" xml:lang="it">
+                Per creare θήρεσσι, ci voleva un modello; ora, naturalmente tale modello
+                doveva essere assai noto a colui che lanciò il neologismo; come a dire
+                che il fatto è avvenuto tra forme contemporanee che più non si può,
+                giacché l’associazione è stata fatta nel cervello dello stesso individuo, 
+                e non c’è voluto più d’un quarto di secondo per concludere da βέλ-εσσι a θήρ-εσσι.
+</ab>
+</div>
+</body>
+<back>
+<!-- Appendice contentente elementi vari -->
+<div type="appendice">
+<!-- Terminologia -->
+<list type="terminologia">
+    <label>
+        <term xml:id="changementmorphol" xml:lang="fr"> changement morphologique</term>
+        <term ref="#changementmorphol" xml:lang="it">cambiamento morfologico</term>
+    </label>
+    <item>
+        <gloss target="#changementmorphol" xml:lang="it" source="https://it.wikipedia.org/wiki/Cambiamento_linguistico/">
+            Il cambiamento linguistico o evoluzione linguistica è la variazione delle caratteristiche di una lingua. 
+            Esso può avvenire nella fonetica (mutamento fonetico), nella fonologia (mutamento fonologico), 
+            nella morfologia (mutamento morfologico), nella sintassi (mutamento sintattico), 
+            nella semantica (mutamento semantico e/o lessicale) di una determinata lingua e 
+            può essere analizzato in sincronia e in diacronia.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="époque" xml:lang="fr">époque</term>
+        <term ref="#époque" xml:lang="it">epoca</term>
+    </label>
+    <item>
+        <gloss target="#époque" xml:lang="it" source="https://www.treccani.it/vocabolario/epoca/">
+            Punto fisso nella storia, segnato da qualche avvenimento memorabile, da cui si comincia a contare
+            una nuova serie di anni; o spazio di tempo compreso fra due di tali punti o momenti della storia.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="analyse" xml:lang="fr">analyse</term>
+        <term ref="#analyse" xml:lang="it">analisi</term>
+    </label>
+    <item>
+        <gloss target="#analyse" xml:lang="it" source="https://www.treccani.it/vocabolario/analisi/">
+            Scomposizione di un tutto, concreto o astratto, nelle parti che lo costituiscono, 
+            soprattutto a scopo di studio; si oppone a sintesi, e ha significato particolare nelle varie discipline, 
+            distinguendosi, per lo più, mediante vari attributi o altre specificazioni.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="formes" xml:lang="fr">Formes</term>
+        <term ref="#formes" xml:lang="it">Forme</term>
+    </label>
+    <item>
+        <gloss target="#formes" xml:lang="it" source="https://it.wikipedia.org/wiki/Forma">
+            La forma in linguistica analizza il rapporto tra l'espressione comunicativa e la forma linguistica.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="valeur" xml:lang="fr">valeur</term>
+        <term ref="#valeur" xml:lang="it">valore</term>
+    </label>
+    <item>
+        <gloss target="#valeur" xml:lang="it" source="https://www.treccani.it/vocabolario/valore/">
+            Importanza che una cosa, materiale o astratta, ha, sia oggettivamente in sé stessa, sia soggettivamente nel giudizio dei singoli
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="langue" xml:lang="fr">langue</term>
+        <term ref="#langue" xml:lang="it">lingua</term>
+    </label>
+    <item>
+        <gloss target="#langue" xml:lang="it" source="https://it.wikipedia.org/wiki/Lingua_(linguistica)">
+            La lingua è il sistema o forma storicamente determinata attraverso il quale gli appartenenti a una comunità si esprimono e 
+            comunicano tra loro attraverso l'uso di un determinato linguaggio ovvero un insieme di segni scritti (simboli) 
+            e/o parlati (suoni).
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="rapport" xml:lang="fr">rapport</term>
+        <term ref="#rapport" xml:lang="it">rapporto</term>
+    </label>
+    <item>
+        <gloss target="#rapport" xml:lang="it" source="https://www.treccani.it/enciclopedia/rapporto/">
+            Legame, relazione, connessione tra due o più elementi.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="faits" xml:lang="fr">faits</term>
+        <term ref="#faits" xml:lang="it">fatti</term>
+    </label>
+    <item>
+        <gloss target="#faits" xml:lang="it" source="https://it.wikipedia.org/wiki/Fatto/">
+            Generalmente un fatto è un evento accaduto, 
+            o un'affermazione considerata vera circa l'accadimento di un determinato evento o un esperimento.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="domaine" xml:lang="fr">domaine</term>
+        <term ref="#domaine" xml:lang="it">dominio</term>
+    </label>
+    <item>
+        <gloss target="#domaine" xml:lang="it" source="https://www.treccani.it/vocabolario/dominio/">
+            domìnio s. m. [dal lat. dominium, der. di domĭnus «signore, padrone»].
+            A. Genericamente il fatto di dominare. 
+            B. Piena potestà di diritto o di fatto sopra persone o cose. 
+            C. In alcune accezioni, spec. del linguaggio giur., è sinon. di proprietà. 
+            D. fatto ormai noto, di cui tutti hanno facoltà di parlare); 
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="fait" xml:lang="fr">fait</term>
+        <term ref="#fait" xml:lang="it">fatto</term>
+    </label>
+    <item>
+        <gloss target="#fait" xml:lang="it" source="https://it.wikipedia.org/wiki/Fatto">
+            Generalmente un fatto è un evento accaduto, 
+            o un'affermazione considerata vera circa l'accadimento di un determinato evento o esperimento.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="changement" xml:lang="fr">changement</term>
+        <term ref="#changement" xml:lang="it">cambiamento</term>
+    </label>
+    <item>
+        <gloss target="#changement" xml:lang="it" source="https://www.treccani.it/enciclopedia/cambiamento_%28Dizionario-delle-Scienze-Fisiche%29/">
+            cambiaménto (o càmbio) [Atto ed effetto del cambiare, lat. cambiare, di origine gallica] 
+            [LSF] Sinon. di variazione, transizione, trasformazione, e simili.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="aperception" xml:lang="fr">aperception</term>
+        <term ref="#aperception" xml:lang="it">percezione</term>
+    </label>
+    <item>
+        <gloss target="#aperception" xml:lang="it" source="https://it.wikipedia.org/wiki/Percezione">
+            La percezione è il processo psichico che opera la sintesi dei dati sensoriali in forme dotate di significato. 
+            Gli assunti allo studio della percezione variano a seconda delle teorie e dei momenti storici. 
+            Le principali discipline che si sono occupate di percezione sono la psicologia, la medicina e la filosofia.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="raison" xml:lang="fr">raison</term>
+        <term ref="#raison" xml:lang="it">ragione</term>
+    </label>
+    <item>
+        <gloss target="#raison" xml:lang="it" source="https://it.wikipedia.org/wiki/Percezione">
+            La facoltà di pensare, mettendo in rapporto i concetti e le loro enunciazioni, 
+            e insieme la facoltà che guida a ben giudicare, a discernere cioè il vero e il falso, 
+            il giusto e l’ingiusto, il bene e il male, alla quale si attribuisce il governo o il controllo dell’istinto, 
+            delle passioni, degli impulsi, ecc.; 
+            può equivalere a giudizio, discernimento, logica, ma ha sign. più ampio e generico e intonazione più familiare.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="forme" xml:lang="fr">forme</term>
+        <term ref="#forme" xml:lang="it">forme</term>
+    </label>
+    <item>
+        <gloss target="#forme" xml:lang="it" source="https://it.wikipedia.org/wiki/Forma">
+            La forma in linguistica analizza il rapporto tra l'espressione comunicativa e la forma linguistica.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="source" xml:lang="fr">source</term>
+        <term ref="#source" xml:lang="it"> fonte </term>
+    </label>
+    <item>
+        <gloss target="#source" xml:lang="it" source="https://www.treccani.it/enciclopedia/fonte/">
+            Per estensione, principio, origine, ciò da cui qualche cosa emana o proviene direttamente.
+        </gloss>       
+    </item>
+
+    <label>
+        <term xml:id="élément" xml:lang="fr">élément</term>
+        <term ref="#élément" xml:lang="it">elemento</term>
+    </label>
+    <item>
+        <gloss target="#élément" xml:lang="it" source="https://it.wikipedia.org/wiki/Elemento">
+            In linguistica l'elemento è parte di una parola o di una espressione.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="mouvement" xml:lang="fr">mouvement</term>
+        <term ref="#mouvement" xml:lang="it">movimento</term>
+    </label>
+    <item>
+        <gloss target="#mouvement" xml:lang="it" source="https://www.treccani.it/vocabolario/movimento/">
+            1. a. L’azione del muovere o del muoversi; 
+            è dunque sinon. di moto (rispetto al quale è, in genere, meno specifico)
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="morphologie" xml:lang="fr">morphologie</term>
+        <term ref="#morphologie" xml:lang="it">morfologia</term>
+    </label>
+    <item>
+        <gloss target="#morphologie" xml:lang="it" source="https://it.wikipedia.org/wiki/Morfologia_(linguistica)">
+            Nella grammatica tradizionale, la morfologia è intesa come lo studio dei meccanismi di formazione delle parole, come la flessione e la derivazione. 
+            Nella linguistica moderna essa studia la struttura della parola e descrive le varie forme che le parole assumono 
+            a seconda delle categorie di numero, di genere, di modo, di tempo, di persona.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="conditionprimordiale" xml:lang="fr">condition primordiale</term>
+        <term ref="#conditionprimordiale" xml:lang="it">morfologia</term>
+    </label>
+    <item>
+        <gloss target="#conditionprimordiale" xml:lang="it" source="https://www.treccani.it/vocabolario/primordiale/">
+            agg. [dal lat. tardo primordialis]. 
+            – 1. Dei primordî, delle origini più lontane: fase, stadio p.; primitivo, originario
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="opérationmorphologique" xml:lang="fr">opération morphologique</term>
+        <term ref="#opérationmorphologique" xml:lang="it">operazione morfologica</term>
+    </label>
+    <item>
+        <gloss target="#opérationmorphologique" xml:lang="it" source="https://it.wikipedia.org/wiki/Morfologia_(linguistica)">
+            Nella grammatica tradizionale, la morfologia è intesa come lo studio dei meccanismi di formazione delle parole, come la flessione e la derivazione. Nella linguistica moderna essa studia la struttura della parola e descrive le varie 
+            forme che le parole assumono a seconda delle categorie di numero, di genere, di modo, di tempo, di persona.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="diversité" xml:lang="fr">diversité</term>
+        <term ref="#diversité" xml:lang="it">diversità</term>
+    </label>
+    <item>
+        <gloss target="#diversité" xml:lang="it" source="https://www.treccani.it/vocabolario/diversita/">
+            diversità s. f. [dal lat. diversĭtas -atis]. – 1. L’esser diverso, non uguale né simile
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="création" xml:lang="fr">création</term>
+        <term ref="#création" xml:lang="it">creazione</term>
+    </label>
+    <item>
+        <gloss target="#création" xml:lang="it" source="https://www.treccani.it/vocabolario/creazione/">
+            creazióne s. f. [dal lat. creatio -onis, der. di creare «creare»]. –
+            1. a. L’atto di creare, di far nascere dal nulla;
+            2. estens. a. Riferito all’uomo, ideazione, invenzione ed esecuzione materiale di un’opera
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="relation" xml:lang="fr">relation</term>
+        <term ref="#relation" xml:lang="it">relazione</term>
+    </label>
+    <item>
+        <gloss target="#relation" xml:lang="it" source="https://www.treccani.it/vocabolario/relazione/">
+            relazióne s. f. [dal lat. relatio -onis, der. di referre «riferire», part. pass. relatus]. – 
+            2. Connessione o corrispondenza che intercorre, in modo essenziale o accidentale, tra due o più enti
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="impulsionlinquistique" xml:lang="fr">impulsion linquistique</term>
+        <term ref="#impulsionlinquistique" xml:lang="it"> impulsione linguistica</term>
+    </label>
+    <item>
+        <gloss target="#impulsionlinquistique" xml:lang="it" source="https://www.garzantilinguistica.it/ricerca/?q=impulsione">
+            1. (fis.) spinta che si esercita su un corpo provocandone il movimento
+            2. (non com.) spinta, impulso (anche in senso figurato)
+            Etimologia: ← dal lat. impulsiōne(m), deriv. di impellĕre ‘spingere innanzi’.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="mot" xml:lang="fr">mot</term>
+        <term ref="#mot" xml:lang="it"> parola</term>
+    </label>
+    <item>
+        <gloss target="#mot" xml:lang="it" source="https://it.wikipedia.org/wiki/Parola">
+            La parola (dal greco παραβολή parabolè, attraverso il latino parabŏla, poi alterato in paràula nel volgare) 
+            è l'espressione orale o scritta di un'informazione o di un concetto, 
+            ovvero la rappresentazione di un'idea svolta a mezzo e nel presupposto di un riferimento convenzionale. 
+            In morfologia la parola è definita come un elemento linguistico costituito da un morfema libero o 
+            da una sequenza di morfemi legati. In sintassi si fa riferimento alla parola come a 
+            un'entità della frase associata a una determinata parte del discorso.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="modèle" xml:lang="fr">modèle</term>
+        <term ref="#modèle" xml:lang="it"> modello</term>
+    </label>
+    <item>
+        <gloss target="#modèle" xml:lang="it" source="https://www.treccani.it/enciclopedia/modello/#Linguistica">
+            La teoria dei modelli è la parte della logica matematica che studia le relazioni tra insiemi 
+            di espressioni di un linguaggio formale e insiemi di strutture in cui tali espressioni sono valide. 
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="néologisme" xml:lang="fr">néologisme</term>
+        <term ref="#néologisme" xml:lang="it"> neologismo</term>
+    </label>
+    <item>
+        <gloss target="#néologisme" xml:lang="it" source="https://it.wikipedia.org/wiki/Neologismo">
+            Un neologismo (termine della lingua italiana derivato dal francese néologisme, 
+            a sua volta dal composto greco νέος-λόγος, neos-logos, 'nuova parola'), 
+            nella linguistica, indica le parole di nuova formazione presenti in una lingua,
+            mentre l'insieme dei processi che portano alla formazione di neologismi è definito neologia.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="association" xml:lang="fr">association</term>
+        <term ref="#association" xml:lang="it"> associazione</term>
+    </label>
+    <item>
+        <gloss target="#association" xml:lang="it" source="https://www.treccani.it/vocabolario/associazione/">
+            associazióne s. f. [der. di associare]. –
+            1. Atto di associare o di associarsi, e anche il fatto di essere associato, nelle varie accezioni del verbo
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="individu" xml:lang="fr">individu</term>
+        <term ref="#individu" xml:lang="it"> individuo</term>
+    </label>
+    <item>
+        <gloss target="#individu" xml:lang="it" source="https://it.wikipedia.org/wiki/Individuo">
+            individuo (dal latino individuus, parola composta dal prefisso in - privativo e dividuus, «diviso») è il lemma corrispondente alla traduzione latina, fatta per la prima volta da Cicerone, 
+            del termine greco ἄτομος: (composto di ἀ- privativo e tema di τέμνω, «tagliare»). 
+            Individuo, quindi, vuol dire indivisibile ed è usato in filosofia per indicare che ogni singolo 
+            essere ha caratteristiche tali (un'individualità) che lo rendono unico e lo differenziano da tutti gli altri esseri della stessa specie.
+        </gloss>
+    </item>
+
+    <label>
+        <term xml:id="exemple" xml:lang="fr">exemple</term>
+        <term ref="#exemple" xml:lang="it">esempio</term>
+    </label>
+    <item>
+        <gloss target="#exemple" xml:lang="it" source="https://www.treccani.it/vocabolario/esempio/">
+            Fatto particolare che serve a illustrare un’affermazione generica, a dare evidenza a un principio teorico.
+        </gloss>
+    </item>
+</list>
+
+<listPerson>
+    <person xml:id="FDS">
+        <persName >
+            <ref target="https://it.wikipedia.org/wiki/Ferdinand_de_Saussure" />
+            <forename>Ferdinand</forename>
+            <surname>De Saussure</surname>
+        </persName>
+        <sex>M</sex>
+        <birth>
+            <date when="26-11-1857">26 novembre 1857</date>
+            <placeName ref="#ginevra">
+                <settlement>Ginevra</settlement>
+                <country>Svizzera</country>
+            </placeName>
+        </birth>
+        <death>
+            <date when="22-02-1913">22 febbraio 1913</date>
+            <placeName>
+                <settlement>Vufflens-le-Château</settlement>
+                <country>Svizzera</country>
+            </placeName>
+        </death>
+    </person>
+</listPerson>
+
+<listBibl>
+    <bibl xml:id="RELib">
+        <author ref="#FDS">
+            <forename>Ferdinand</forename>
+            <surname>De Saussure</surname>
+        </author>
+        <author xml:id="RE">
+            <forename>Rudolf</forename>
+            <surname>Engler</surname>
+        </author>
+        <title type="main" level="m">Cours de linguistique générale</title>
+        <date when="1967-1974">1967-1974</date>
+        <publisher>Harrassowitz, Wiesbaden</publisher>
+    </bibl>
+
+    <bibl xml:id="EFLib">
+        <author xml:id="EF">
+            <forename>Emanuele</forename>
+            <surname>Fadda</surname>
+        </author>
+        <title type="main" level="m">Sentimento della lingua</title>
+        <title type="sub">Per un'antropologia linguistica saussuriana</title>
+        <pubPlace>
+            <placeName ref="#alessandria">Alessandria</placeName>
+        </pubPlace>
+        <publisher>Edizioni dell'Orso</publisher>
+        <date when="2017">2017</date>
+    </bibl>
+
+    <bibl xml:id="TDMLib">
+        <author ref="#FDS">
+            <forename>Ferdinand</forename>
+            <surname>De Saussure</surname>
+        </author>
+        <author xml:id="TDM">
+            <forename>Tullio</forename>
+            <surname>De Mauro</surname>
+        </author>
+        <title type="main" level="m">La linguistica generale di Robert Godel</title>
+        <title type="sub">Cahiers Ferdinand de Saussure. Revue de linguistique générale</title>
+        <date when="1969">1969</date>
+        <publisher>Librairie Droz</publisher>
+    </bibl>
+</listBibl>
+
+<listPlace>
+    <place xml:id="ginevra">
+        <placeName ref="https://it.wikipedia.org/wiki/Ginevra">Ginevra</placeName>
+        <settlement>Ginevra</settlement>
+        <country>Svizzera</country>
+    </place>
+</listPlace>
+</div>
+</back>
+</text>
+</TEI>
