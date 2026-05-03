@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Hope - Lilac Theme Preview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Public+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/feather-icons" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <style>
+        /* ---- Base Lilac Theme Styles (simplified preview) ---- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            font-size: 14px;
+            color: #5a5a5a;
+            background-color: #f0f0f0;
+            line-height: 160%;
+            word-wrap: break-word;
+            letter-spacing: 0.2px;
+        }
+
+        a { color: #8c8c8c; text-decoration: none; transition: all 0.3s; }
+        a:hover { color: #9fa8da; }
+
+        h1, h2, h3, .title {
+            color: #212121;
+            letter-spacing: 2px;
+            line-height: 160%;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        h1, .title { font-size: 1.25em; }
+
+        blockquote {
+            padding: 0 0 0 1.25em;
+            border-left: 1px solid #dcdcdc;
+            margin: 1.25em 0 1.25em 1.25em;
+        }
+
+        /* ---- Sidebar ---- */
+        #sidebar {
+            background-color: #ffffff;
+            width: 300px;
+            text-align: center;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            box-shadow: 1px 1px 3px #dcdcdc;
+            overflow-y: auto;
+            box-sizing: border-box;
+            z-index: 10;
+        }
+
+        #side-content { padding: 50px; }
+
+        #side-icon {
+            background: linear-gradient(to bottom right, #7986cb, #e1bee7);
+            border-radius: 50%;
+            padding: 5px;
+            display: inline-block;
+            margin-bottom: 1.25em;
+        }
+
+        #sidebar .icon {
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            background-color: #e8eaf6;
+            border-radius: 50%;
+        }
+
+        #sidebar .title { margin-bottom: 0.5em; }
+
+        #sidebar .sub-ital {
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 1em;
+            color: #8c8c8c;
+        }
+
+        #description {
+            font-size: 0.95em;
+            margin-bottom: 1.5em;
+            line-height: 170%;
+        }
+
+        nav#side-nav {
+            list-style: none;
+            text-align: left;
+        }
+
+        nav#side-nav li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        nav#side-nav li a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 16px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85em;
+            color: #5a5a5a;
+        }
+
+        nav#side-nav li a:hover { color: #9fa8da; }
+
+        nav#side-nav li a svg { width: 16px; height: 16px; }
+
+        /* ---- Container ---- */
+        #container {
+            margin-left: 300px;
+            padding: 50px;
+        }
+
+        /* ---- Posts ---- */
+        .posts {
+            background: #ffffff;
+            border-radius: 5px;
+            margin-bottom: 100px;
+            max-width: 540px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 1px 1px 3px #dcdcdc;
+            overflow: hidden;
+        }
+
+        .top-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .top-info .icon-gradient {
+            width: 36px;
+            height: 36px;
+        }
+
+        .top-info .icon-gradient img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        .top-info .ui-icon {
+            color: #9fa8da;
+        }
+
+        .top-info .ui-icon svg { width: 16px; height: 16px; }
+
+        .post-content { padding: 20px; }
+        .post-content .title { margin-bottom: 0.75em; }
+        .post-content p { margin-bottom: 1em; }
+        .post-content p:last-child { margin-bottom: 0; }
+
+        .post-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: -20px -20px 20px;
+            width: calc(100% + 40px);
+            max-width: calc(100% + 40px);
+        }
+
+        .caption { padding: 0; }
+
+        .post-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .post-info a { color: #8c8c8c; }
+        .post-info a:hover { color: #9fa8da; }
+        .post-info .post-buttons { display: flex; gap: 16px; }
+        .post-info .post-buttons svg { width: 16px; height: 16px; }
+
+        .tag-click {
+            padding: 12px 20px;
+            border-top: 1px solid #f0f0f0;
+            font-size: 0.85em;
+        }
+
+        .tag-click a {
+            display: inline-block;
+            margin-right: 8px;
+            margin-bottom: 4px;
+            color: #9fa8da;
+        }
+
+        /* ---- Quote Post ---- */
+        .post-content .quote-text {
+            font-size: 1.15em;
+            font-style: italic;
+            line-height: 180%;
+            margin-bottom: 1em;
+        }
+
+        .post-content .quote-source {
+            font-size: 0.9em;
+            color: #8c8c8c;
+        }
+
+        /* ---- Pagination ---- */
+        #pagination {
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto 60px;
+        }
+
+        #pagination a {
+            display: inline-block;
+            padding: 8px 20px;
+            border: 1px solid #dcdcdc;
+            border-radius: 4px;
+            margin: 0 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85em;
+        }
+
+        #pagination a:hover {
+            border-color: #9fa8da;
+            color: #9fa8da;
+        }
+
+        /* ---- Credit ---- */
+        #m {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            font-size: 0.75em;
+            letter-spacing: 1px;
+            color: #8c8c8c;
+        }
+
+        /*----- LANDING PAGE "TO HOPE" -----*/
+
+        #landing-page {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 99999999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #fef5f3;
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(242, 213, 213, 0.5) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(232, 180, 184, 0.3) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 80%, rgba(184, 197, 166, 0.2) 0%, transparent 45%),
+                radial-gradient(ellipse at 70% 60%, rgba(252, 232, 230, 0.4) 0%, transparent 50%);
+            overflow: hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        #landing-page.hide {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        #landing-page::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            left: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(232, 180, 184, 0.25) 0%, transparent 70%);
+            pointer-events: none;
+            animation: floatBlob1 8s ease-in-out infinite;
+        }
+
+        #landing-page::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            right: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(184, 197, 166, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+            animation: floatBlob2 10s ease-in-out infinite;
+        }
+
+        @keyframes floatBlob1 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 20px); }
+        }
+
+        @keyframes floatBlob2 {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-20px, -30px); }
+        }
+
+        .landing-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+            padding: 40px;
+        }
+
+        .landing-flowers-top {
+            font-size: 32px;
+            letter-spacing: 16px;
+            color: #e8b4b8;
+            margin-bottom: 30px;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.3s forwards;
+        }
+
+        .landing-title {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            font-size: 3.5em;
+            font-weight: 400;
+            color: #8b6f6f;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.5s forwards;
+        }
+
+        .landing-subtitle {
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-style: italic;
+            font-size: 1.3em;
+            color: #d4a0a0;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.7s forwards;
+        }
+
+        .landing-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            max-width: 250px;
+            margin: 0 auto 30px;
+            color: #e8b4b8;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.6s forwards;
+        }
+
+        .landing-divider::before,
+        .landing-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e8b4b8, transparent);
+        }
+
+        .landing-quote {
+            font-family: 'Special Elite', monospace;
+            font-size: 1em;
+            line-height: 1.9;
+            color: #8b6f6f;
+            letter-spacing: 1.5px;
+            max-width: 420px;
+            margin: 0 auto 40px;
+            opacity: 0;
+            animation: fadeDown 1s ease 0.9s forwards;
+            position: relative;
+            padding: 24px 0;
+        }
+
+        .landing-quote::before {
+            content: '\201C';
+            display: block;
+            font-size: 3.5em;
+            color: #e8b4b8;
+            opacity: 0.4;
+            line-height: 0.5;
+            margin-bottom: 16px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .landing-quote::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #e8b4b8, transparent);
+            margin: 20px auto 0;
+        }
+
+        .landing-enter {
+            display: inline-block;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.85em;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #d4a0a0;
+            border: 1px solid rgba(212, 160, 160, 0.4);
+            padding: 12px 36px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeDown 1s ease 1.1s forwards;
+            background: transparent;
+        }
+
+        .landing-enter:hover {
+            background: rgba(232, 180, 184, 0.15);
+            border-color: #e8b4b8;
+            color: #8b6f6f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(232, 180, 184, 0.2);
+        }
+
+        .landing-flowers-bottom {
+            margin-top: 40px;
+            font-size: 20px;
+            letter-spacing: 8px;
+            color: #b8c5a6;
+            opacity: 0;
+            animation: fadeDown 1s ease 1.3s forwards;
+        }
+
+        .landing-deco-left,
+        .landing-deco-right {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .landing-deco-left {
+            top: 8%;
+            left: 4%;
+            opacity: 0;
+            animation: fadeIn 1.5s ease 1.5s forwards;
+            font-size: 80px;
+            color: #e8b4b8;
+        }
+
+        .landing-deco-right {
+            bottom: 8%;
+            right: 4%;
+            opacity: 0;
+            animation: fadeIn 1.5s ease 1.8s forwards;
+            font-size: 80px;
+            color: #b8c5a6;
+        }
+
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 0.15; }
+        }
+
+        @media (max-width: 900px) {
+            #sidebar { display: none; }
+            #container { margin-left: 0; padding: 30px 16px; }
+        }
+
+        @media (max-width: 768px) {
+            .landing-title { font-size: 2.4em; letter-spacing: 4px; }
+            .landing-subtitle { font-size: 1.1em; letter-spacing: 2px; }
+            .landing-quote { font-size: 0.9em; }
+            .landing-content { padding: 30px 20px; }
+            .landing-deco-left, .landing-deco-right { display: none; }
+        }
+
+        @media (max-width: 480px) {
+            .landing-title { font-size: 1.8em; letter-spacing: 3px; }
+            .landing-subtitle { font-size: 1em; }
+            .landing-flowers-top { font-size: 24px; letter-spacing: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== LANDING PAGE ===== -->
+    <div id="landing-page">
+        <div class="landing-deco-left">&#10047;</div>
+        <div class="landing-deco-right">&#10047;</div>
+
+        <div class="landing-content">
+            <div class="landing-flowers-top">&#10047; &#10047; &#10047;</div>
+
+            <h1 class="landing-title">To Hope</h1>
+            <p class="landing-subtitle">Pensieri sparsi, ricordi e piccoli momenti di bellezza</p>
+
+            <div class="landing-divider">&#10047;</div>
+
+            <div class="landing-quote">
+                To hope is not to escape the difficult, but to be able to move forward with courage despite the difficult.
+            </div>
+
+            <a class="landing-enter" id="enter-blog" href="javascript:void(0)">entra nel diario</a>
+
+            <div class="landing-flowers-bottom">&#10047; &#10047; &#10047; &#10047; &#10047;</div>
+        </div>
+    </div>
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside id="sidebar">
+        <div id="side-content">
+            <div id="side-icon">
+                <img src="https://api.dicebear.com/7.x/initials/svg?seed=TH&backgroundColor=e8eaf6&textColor=7986cb" class="icon" alt="avatar"/>
+            </div>
+
+            <div class="title"><a href="/">To Hope</a></div>
+            <div class="sub-ital">un diario digitale</div>
+
+            <div id="description">Pensieri sparsi, ricordi e piccoli momenti di bellezza raccolti tra le pagine di questo diario.</div>
+
+            <nav id="side-nav">
+                <li><a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> <span class="nav-txt">home</span></a></li>
+                <li><a href="/ask"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg> <span class="nav-txt">scrivimi</span></a></li>
+                <li><a href="/archive"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg> <span class="nav-txt">archivio</span></a></li>
+            </nav>
+        </div>
+    </aside>
+
+    <!-- ===== POSTS ===== -->
+    <section id="container">
+
+        <!-- Text Post -->
+        <article class="posts">
+            <div class="top-info">
+                <div class="icon-gradient"><img src="https://api.dicebear.com/7.x/initials/svg?seed=TH&backgroundColor=e8eaf6&textColor=7986cb" class="icon" style="width:36px;height:36px;border-radius:50%" alt="avatar"/></div>
+                <div class="ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+            </div>
+            <div class="post-content">
+                <h1 class="title">Lettere che non spedir&ograve; mai</h1>
+                <p>Ci sono parole che rimangono incastrate tra i pensieri, troppo fragili per essere pronunciate, troppo importanti per essere dimenticate. Le scrivo qui, su queste pagine invisibili, dove il vento non pu&ograve; portarle via.</p>
+                <p>Oggi il cielo era di quel rosa che sembra dipinto a mano, come se qualcuno avesse versato acquarello tra le nuvole. Ho pensato a te, a come avresti sorriso vedendolo.</p>
+                <blockquote>To hope is not to escape the difficult, but to be able to move forward with courage despite the difficult.</blockquote>
+            </div>
+            <div class="post-info">
+                <span>3 maggio 2026 &middot; 12 note</span>
+                <div class="post-buttons">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                </div>
+            </div>
+            <div class="tag-click">
+                <a href="#">#pensieri</a>
+                <a href="#">#lettere</a>
+                <a href="#">#speranza</a>
+            </div>
+        </article>
+
+        <!-- Photo Post -->
+        <article class="posts">
+            <div class="top-info">
+                <div class="icon-gradient"><img src="https://api.dicebear.com/7.x/initials/svg?seed=TH&backgroundColor=e8eaf6&textColor=7986cb" class="icon" style="width:36px;height:36px;border-radius:50%" alt="avatar"/></div>
+                <div class="ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
+            </div>
+            <div class="post-content">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=540&q=80" alt="Fiori rosa"/>
+                <div class="caption">
+                    <p><i>I fiori che ho trovato stamattina al mercato. Profumano di primavera e di promesse.</i></p>
+                </div>
+            </div>
+            <div class="post-info">
+                <span>1 maggio 2026 &middot; 28 note</span>
+                <div class="post-buttons">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                </div>
+            </div>
+            <div class="tag-click">
+                <a href="#">#fiori</a>
+                <a href="#">#primavera</a>
+                <a href="#">#bellezza</a>
+            </div>
+        </article>
+
+        <!-- Text Post 2 -->
+        <article class="posts">
+            <div class="top-info">
+                <div class="icon-gradient"><img src="https://api.dicebear.com/7.x/initials/svg?seed=TH&backgroundColor=e8eaf6&textColor=7986cb" class="icon" style="width:36px;height:36px;border-radius:50%" alt="avatar"/></div>
+                <div class="ui-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div>
+            </div>
+            <div class="post-content">
+                <h1 class="title">Piccoli rituali</h1>
+                <p>Ho iniziato a raccogliere petali di fiori tra le pagine dei libri. Non per conservarli, ma per ritrovarli quando meno me lo aspetto &mdash; piccole sorprese dal passato, messaggi che mi mando dal presente al futuro.</p>
+                <p>Il t&egrave; della sera ha un sapore diverso quando lo bevi guardando il tramonto. Ogni sorso &egrave; un respiro, ogni respiro &egrave; una preghiera silenziosa.</p>
+            </div>
+            <div class="post-info">
+                <span>28 aprile 2026 &middot; 8 note</span>
+                <div class="post-buttons">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></a>
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+                </div>
+            </div>
+            <div class="tag-click">
+                <a href="#">#rituali</a>
+                <a href="#">#quotidianit&agrave;</a>
+                <a href="#">#pace</a>
+            </div>
+        </article>
+
+        <!-- Pagination -->
+        <div id="pagination">
+            <a href="#">&larr; indietro</a>
+            <a href="#">avanti &rarr;</a>
+        </div>
+    </section>
+
+    <a href="#" id="m">lilac theme by seyche</a>
+
+    <script>
+    $(document).ready(function(){
+        $('#enter-blog').on('click', function(e) {
+            e.preventDefault();
+            $('#landing-page').addClass('hide');
+            setTimeout(function() {
+                $('#landing-page').remove();
+            }, 900);
+        });
+    });
+    </script>
+</body>
+</html>
