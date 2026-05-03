@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{Title}</title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <!-- Tumblr Meta Options -->
+    <meta name="color:Background" content="#fef5f3">
+    <meta name="color:Accent" content="#d4a0a0">
+    <meta name="color:Title" content="#8b6f6f">
+    <meta name="color:Text" content="#5a4a4a">
+    <meta name="color:Link" content="#c48b8b">
+    <meta name="font:Title" content="Special Elite">
+    <meta name="font:Body" content="Cormorant Garamond">
+    <meta name="if:Show header image" content="1">
+    <meta name="if:Infinite scroll" content="0">
+    <meta name="text:Diary subtitle" content="a digital diary">
+
+    <style>
+        /* ============================================
+           TO HOPE — Digital Diary Tumblr Theme
+           Aesthetic inspired by Ocean Fernandez
+           ============================================ */
+
+        :root {
+            --bg: {color:Background};
+            --accent: {color:Accent};
+            --title-color: {color:Title};
+            --text-color: {color:Text};
+            --link-color: {color:Link};
+            --paper: #fffbf9;
+            --paper-shadow: rgba(180, 140, 140, 0.12);
+            --border: rgba(212, 160, 160, 0.3);
+            --floral-pink: #f2d5d5;
+            --floral-blush: #fce8e6;
+            --petal: #e8b4b8;
+            --sage: #b8c5a6;
+            --cream: #faf6f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(242, 213, 213, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(232, 180, 184, 0.2) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 80%, rgba(184, 197, 166, 0.15) 0%, transparent 45%);
+            color: var(--text-color);
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 18px;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+            opacity: 0.85;
+        }
+
+        /* ---- Floral Corner Decorations ---- */
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        body::before {
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 30% 30%, var(--petal) 0%, transparent 70%);
+        }
+
+        body::after {
+            bottom: 0;
+            right: 0;
+            background: radial-gradient(circle at 70% 70%, var(--sage) 0%, transparent 70%);
+        }
+
+        /* ---- Header ---- */
+        #header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .diary-flower {
+            font-size: 28px;
+            letter-spacing: 12px;
+            color: var(--petal);
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+
+        #blog-title {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            font-size: 2.8em;
+            font-weight: 400;
+            color: var(--title-color);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        #blog-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .diary-subtitle {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.1em;
+            color: var(--accent);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        #description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1em;
+            font-style: italic;
+            color: var(--text-color);
+            max-width: 500px;
+            margin: 0 auto 20px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* ---- Divider ---- */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 10px auto 30px;
+            max-width: 300px;
+            color: var(--petal);
+            opacity: 0.5;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--petal), transparent);
+        }
+
+        /* ---- Navigation ---- */
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            font-family: 'Special Elite', monospace;
+            font-size: 0.85em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 15px;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav a:hover {
+            border-bottom-color: var(--petal);
+        }
+
+        /* ---- Main Content ---- */
+        #content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ---- Posts ---- */
+        .post {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 40px 44px;
+            margin-bottom: 50px;
+            position: relative;
+            box-shadow:
+                0 2px 20px var(--paper-shadow),
+                0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+        }
+
+        /* Paper texture lines */
+        .post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 56px;
+            width: 1px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 2px,
+                rgba(212, 160, 160, 0.15) 2px,
+                rgba(212, 160, 160, 0.15) 3px
+            );
+            opacity: 0.6;
+        }
+
+        /* Decorative corner */
+        .post::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 24px 24px 0;
+            border-color: transparent var(--bg) transparent transparent;
+            filter: drop-shadow(-1px 1px 1px rgba(180, 140, 140, 0.1));
+        }
+
+        /* ---- Post Date ---- */
+        .post-date {
+            font-family: 'Special Elite', monospace;
+            font-size: 0.8em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .post-date a {
+            color: inherit;
+        }
+
+        /* ---- Text Posts ---- */
+        .post-title {
+            font-family: 'Special Elite', monospace;
+            font-size: 1.6em;
+            font-weight: 400;
+            color: var(--title-color);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .post-title a {
+            color: inherit;
+        }
+
+        .post-body {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: var(--text-color);
+        }
+
+        .post-body p {
+            margin-bottom: 1.2em;
+        }
+
+        .post-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .post-body blockquote {
+            border-left: 2px solid var(--petal);
+            margin: 1.5em 0;
+            padding: 12px 24px;
+            font-style: italic;
+            color: var(--accent);
+            background: rgba(252, 232, 230, 0.3);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .post-body h1, .post-body h2, .post-body h3 {
+            font-family: 'Lora', serif;
+            color: var(--title-color);
+            margin: 1.5em 0 0.8em;
+            font-weight: 500;
+        }
+
+        .post-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin: 1em 0;
+        }
+
+        .post-body a {
+            border-bottom: 1px solid var(--floral-pink);
+        }
+
+        .post-body ul, .post-body ol {
+            margin: 1em 0;
+            padding-left: 1.5em;
+        }
+
+        .post-body li {
+            margin-bottom: 0.4em;
+        }
+
+        /* ---- Photo Posts ---- */
+        .post-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .post-photo {
+            margin: -40px -44px 24px;
+            border-radius: 4px 4px 0 0;
+            overflow: hidden;
+        }
+
+        .post-photo + .post-caption {
+            font-style: italic;
+        }
+
+        /* ---- Quote Posts ---- */
+        .post-quote {
+            font-family: 'Special Elite', monospace;
+            font-size: 1.3em;
+            line-height: 1.7;
+            color: var(--title-color);
+            text-align: center;
+            padding: 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .post-quote::before {
+            content: '\201C';
+            display: block;
+            font-size: 3em;
+            color: var(--petal);
+            opacity: 0.4;
+            line-height: 0.5;
+            margin-bottom: 16px;
+        }
+
+        .post-quote-source {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.85em;
+            color: var(--accent);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .post-quote-source::before {
+            content: '\2014\00a0';
+        }
+
+        /* ---- Link Posts ---- */
+        .post-link a {
+            font-family: 'Special Elite', monospace;
+            font-size: 1.2em;
+            display: block;
+            padding: 16px 24px;
+            background: var(--floral-blush);
+            border-radius: 4px;
+            color: var(--title-color);
+            letter-spacing: 1px;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+
+        .post-link a:hover {
+            background: var(--floral-pink);
+        }
+
+        /* ---- Chat Posts ---- */
+        .post-chat {
+            font-family: 'Special Elite', monospace;
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .chat-line {
+            padding: 8px 0;
+            border-bottom: 1px dotted var(--border);
+        }
+
+        .chat-line:last-child {
+            border-bottom: none;
+        }
+
+        .chat-label {
+            font-weight: 600;
+            color: var(--title-color);
+        }
+
+        /* ---- Audio Posts ---- */
+        .post-audio {
+            margin: 16px 0;
+        }
+
+        .post-audio iframe {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        /* ---- Video Posts ---- */
+        .post-video {
+            margin: -40px -44px 24px;
+            border-radius: 4px 4px 0 0;
+            overflow: hidden;
+        }
+
+        .post-video iframe,
+        .post-video video {
+            width: 100%;
+            display: block;
+        }
+
+        /* ---- Tags ---- */
+        .post-tags {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .post-tags a {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.8em;
+            color: var(--accent);
+            margin-right: 12px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .post-tags a::before {
+            content: '#';
+        }
+
+        .post-tags a:hover {
+            opacity: 1;
+        }
+
+        /* ---- Post Footer / Notes ---- */
+        .post-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        .post-footer a {
+            color: inherit;
+        }
+
+        .post-footer a:hover {
+            opacity: 1;
+        }
+
+        .post-notes-count {
+            text-transform: uppercase;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        .post-actions a {
+            opacity: 0.5;
+            transition: opacity 0.3s;
+        }
+
+        .post-actions a:hover {
+            opacity: 1;
+        }
+
+        /* ---- Pagination ---- */
+        #pagination {
+            text-align: center;
+            padding: 40px 20px 60px;
+            font-family: 'Special Elite', monospace;
+            letter-spacing: 4px;
+            font-size: 0.9em;
+        }
+
+        #pagination a {
+            color: var(--accent);
+            padding: 8px 20px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        #pagination a:hover {
+            background: var(--floral-blush);
+            border-color: var(--petal);
+        }
+
+        .page-number {
+            color: var(--accent);
+            opacity: 0.5;
+            font-size: 0.85em;
+        }
+
+        /* ---- Permalink Page ---- */
+        {block:PermalinkPage}
+        .post-notes-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+        }
+
+        .post-notes-container ol.notes {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-notes-container ol.notes li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.9em;
+            color: var(--text-color);
+        }
+
+        .post-notes-container ol.notes li a {
+            color: var(--link-color);
+        }
+
+        .post-notes-container ol.notes li img {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            vertical-align: middle;
+            margin-right: 6px;
+        }
+        {/block:PermalinkPage}
+
+        /* ---- Footer ---- */
+        #footer {
+            text-align: center;
+            padding: 30px 20px 50px;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.75em;
+            letter-spacing: 3px;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+
+        #footer a {
+            color: inherit;
+        }
+
+        /* ---- Search Page ---- */
+        {block:SearchPage}
+        .search-results-header {
+            text-align: center;
+            padding: 20px;
+            font-family: 'Special Elite', monospace;
+            color: var(--title-color);
+            letter-spacing: 2px;
+        }
+        {/block:SearchPage}
+
+        /* ---- Tag Page ---- */
+        {block:TagPage}
+        .tag-page-header {
+            text-align: center;
+            padding: 20px;
+            font-family: 'Special Elite', monospace;
+            color: var(--title-color);
+            letter-spacing: 2px;
+        }
+        {/block:TagPage}
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            #blog-title {
+                font-size: 2em;
+                letter-spacing: 3px;
+            }
+
+            .post {
+                padding: 28px 24px;
+                margin-bottom: 36px;
+            }
+
+            .post::before {
+                left: 36px;
+            }
+
+            .post-photo {
+                margin: -28px -24px 20px;
+            }
+
+            .post-video {
+                margin: -28px -24px 20px;
+            }
+
+            .post-title {
+                font-size: 1.3em;
+            }
+
+            .post-quote {
+                font-size: 1.1em;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 0.8em;
+            }
+
+            #content {
+                padding: 0 16px 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #blog-title {
+                font-size: 1.6em;
+                letter-spacing: 2px;
+            }
+
+            .diary-subtitle {
+                font-size: 0.95em;
+            }
+
+            .post {
+                padding: 24px 20px;
+            }
+
+            .post::before {
+                display: none;
+            }
+
+            .post-photo {
+                margin: -24px -20px 16px;
+            }
+
+            .post-video {
+                margin: -24px -20px 16px;
+            }
+        }
+
+        /* ---- Scroll animations ---- */
+        .post {
+            animation: fadeInUp 0.6s ease both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ---- Selection color ---- */
+        ::selection {
+            background: var(--floral-pink);
+            color: var(--title-color);
+        }
+
+        ::-moz-selection {
+            background: var(--floral-pink);
+            color: var(--title-color);
+        }
+
+        /* ---- Scrollbar ---- */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--petal);
+            border-radius: 3px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="diary-flower">&#10047; &#10047; &#10047;</div>
+        <h1 id="blog-title"><a href="/">{Title}</a></h1>
+        <p class="diary-subtitle">{text:Diary subtitle}</p>
+
+        {block:Description}
+        <p id="description">{Description}</p>
+        {/block:Description}
+
+        <div class="divider">&#10047;</div>
+
+        <nav>
+            <a href="/">diario</a>
+            <a href="/archive">archivio</a>
+            {block:AskEnabled}<a href="/ask">scrivimi</a>{/block:AskEnabled}
+            {block:SubmissionsEnabled}<a href="/submit">invia</a>{/block:SubmissionsEnabled}
+        </nav>
+    </header>
+
+    <!-- Search Results -->
+    {block:SearchPage}
+    <div class="search-results-header">
+        <p>Risultati per: &ldquo;{SearchQuery}&rdquo;</p>
+    </div>
+    {/block:SearchPage}
+
+    <!-- Tag Page -->
+    {block:TagPage}
+    <div class="tag-page-header">
+        <p>Pagine del diario con: #{Tag}</p>
+    </div>
+    {/block:TagPage}
+
+    <!-- Posts -->
+    <main id="content">
+        {block:Posts}
+        <article class="post">
+
+            <!-- Post Date -->
+            <div class="post-date">
+                <a href="{Permalink}">{DayOfMonth} {Month} {Year}</a>
+            </div>
+
+            <!-- Text Post -->
+            {block:Text}
+                {block:Title}<h2 class="post-title"><a href="{Permalink}">{Title}</a></h2>{/block:Title}
+                <div class="post-body">{Body}</div>
+            {/block:Text}
+
+            <!-- Photo Post -->
+            {block:Photo}
+                <div class="post-photo">
+                    <a href="{PhotoURL-HighRes}"><img src="{PhotoURL-500}" alt="{PhotoAlt}"></a>
+                </div>
+                {block:Caption}<div class="post-body post-caption">{Caption}</div>{/block:Caption}
+            {/block:Photo}
+
+            <!-- Photoset Post -->
+            {block:Photoset}
+                <div class="post-photo">
+                    {Photoset-500}
+                </div>
+                {block:Caption}<div class="post-body post-caption">{Caption}</div>{/block:Caption}
+            {/block:Photoset}
+
+            <!-- Quote Post -->
+            {block:Quote}
+                <div class="post-quote">{Quote}</div>
+                {block:Source}<div class="post-quote-source">{Source}</div>{/block:Source}
+            {/block:Quote}
+
+            <!-- Link Post -->
+            {block:Link}
+                <div class="post-link">
+                    <a href="{URL}" {Target}>{Name}</a>
+                </div>
+                {block:Description}<div class="post-body">{Description}</div>{/block:Description}
+            {/block:Link}
+
+            <!-- Chat Post -->
+            {block:Chat}
+                {block:Title}<h2 class="post-title">{Title}</h2>{/block:Title}
+                <div class="post-chat">
+                    {block:Lines}
+                    <div class="chat-line">
+                        {block:Label}<span class="chat-label">{Label}</span>{/block:Label}
+                        {Line}
+                    </div>
+                    {/block:Lines}
+                </div>
+            {/block:Chat}
+
+            <!-- Audio Post -->
+            {block:Audio}
+                <div class="post-audio">
+                    {AudioPlayer}
+                </div>
+                {block:Caption}<div class="post-body">{Caption}</div>{/block:Caption}
+            {/block:Audio}
+
+            <!-- Video Post -->
+            {block:Video}
+                <div class="post-video">
+                    {Video-500}
+                </div>
+                {block:Caption}<div class="post-body post-caption">{Caption}</div>{/block:Caption}
+            {/block:Video}
+
+            <!-- Answer Post -->
+            {block:Answer}
+                <div class="post-question">
+                    <strong>{Asker}:</strong> {Question}
+                </div>
+                <div class="post-body">{Answer}</div>
+            {/block:Answer}
+
+            <!-- Tags -->
+            {block:HasTags}
+            <div class="post-tags">
+                {block:Tags}<a href="{TagURL}">{Tag}</a>{/block:Tags}
+            </div>
+            {/block:HasTags}
+
+            <!-- Post Footer -->
+            <div class="post-footer">
+                <span class="post-notes-count">
+                    {block:NoteCount}<a href="{Permalink}">{NoteCountWithLabel}</a>{/block:NoteCount}
+                </span>
+                <div class="post-actions">
+                    <a href="{ReblogURL}" title="reblog">reblog</a>
+                    <a href="{Permalink}" title="permalink">&infin;</a>
+                </div>
+            </div>
+
+        </article>
+        {/block:Posts}
+
+        <!-- Permalink Notes -->
+        {block:PermalinkPage}
+        {block:PostNotes}
+        <div class="post-notes-container">
+            {PostNotes}
+        </div>
+        {/block:PostNotes}
+        {/block:PermalinkPage}
+    </main>
+
+    <!-- Pagination -->
+    {block:Pagination}
+    <div id="pagination">
+        {block:PreviousPage}<a href="{PreviousPage}">&larr; prima</a>{/block:PreviousPage}
+        <span class="page-number">{CurrentPage} / {TotalPages}</span>
+        {block:NextPage}<a href="{NextPage}">dopo &rarr;</a>{/block:NextPage}
+    </div>
+    {/block:Pagination}
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>&ldquo;to hope is not to escape the difficult&rdquo;</p>
+        <p><a href="https://tumblr.com">tumblr</a></p>
+    </footer>
+
+</body>
+</html>

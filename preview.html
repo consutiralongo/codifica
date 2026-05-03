@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To Hope - Digital Diary Preview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #fef5f3;
+            --accent: #d4a0a0;
+            --title-color: #8b6f6f;
+            --text-color: #5a4a4a;
+            --link-color: #c48b8b;
+            --paper: #fffbf9;
+            --paper-shadow: rgba(180, 140, 140, 0.12);
+            --border: rgba(212, 160, 160, 0.3);
+            --floral-pink: #f2d5d5;
+            --floral-blush: #fce8e6;
+            --petal: #e8b4b8;
+            --sage: #b8c5a6;
+            --cream: #faf6f2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            background-image:
+                radial-gradient(ellipse at 20% 50%, rgba(242, 213, 213, 0.4) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(232, 180, 184, 0.2) 0%, transparent 40%),
+                radial-gradient(ellipse at 50% 80%, rgba(184, 197, 166, 0.15) 0%, transparent 45%);
+            color: var(--text-color);
+            font-family: 'Cormorant Garamond', 'Georgia', serif;
+            font-size: 18px;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent);
+            opacity: 0.85;
+        }
+
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.15;
+        }
+
+        body::before {
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at 30% 30%, var(--petal) 0%, transparent 70%);
+        }
+
+        body::after {
+            bottom: 0;
+            right: 0;
+            background: radial-gradient(circle at 70% 70%, var(--sage) 0%, transparent 70%);
+        }
+
+        #header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .diary-flower {
+            font-size: 28px;
+            letter-spacing: 12px;
+            color: var(--petal);
+            margin-bottom: 16px;
+            opacity: 0.7;
+        }
+
+        #blog-title {
+            font-family: 'Special Elite', 'Courier New', monospace;
+            font-size: 2.8em;
+            font-weight: 400;
+            color: var(--title-color);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        #blog-title a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .diary-subtitle {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.1em;
+            color: var(--accent);
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        #description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1em;
+            font-style: italic;
+            color: var(--text-color);
+            max-width: 500px;
+            margin: 0 auto 20px;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin: 10px auto 30px;
+            max-width: 300px;
+            color: var(--petal);
+            opacity: 0.5;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--petal), transparent);
+        }
+
+        nav {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        nav a {
+            font-family: 'Special Elite', monospace;
+            font-size: 0.85em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 15px;
+            padding: 4px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav a:hover {
+            border-bottom-color: var(--petal);
+        }
+
+        #content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 0 24px 60px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .post {
+            background: var(--paper);
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            padding: 40px 44px;
+            margin-bottom: 50px;
+            position: relative;
+            box-shadow:
+                0 2px 20px var(--paper-shadow),
+                0 0 0 1px rgba(255, 255, 255, 0.8) inset;
+            animation: fadeInUp 0.6s ease both;
+        }
+
+        .post:nth-child(2) { animation-delay: 0.15s; }
+        .post:nth-child(3) { animation-delay: 0.3s; }
+        .post:nth-child(4) { animation-delay: 0.45s; }
+
+        .post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 56px;
+            width: 1px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                to bottom,
+                transparent,
+                transparent 2px,
+                rgba(212, 160, 160, 0.15) 2px,
+                rgba(212, 160, 160, 0.15) 3px
+            );
+            opacity: 0.6;
+        }
+
+        .post::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            right: -1px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 24px 24px 0;
+            border-color: transparent var(--bg) transparent transparent;
+            filter: drop-shadow(-1px 1px 1px rgba(180, 140, 140, 0.1));
+        }
+
+        .post-date {
+            font-family: 'Special Elite', monospace;
+            font-size: 0.8em;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .post-date a { color: inherit; }
+
+        .post-title {
+            font-family: 'Special Elite', monospace;
+            font-size: 1.6em;
+            font-weight: 400;
+            color: var(--title-color);
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .post-title a { color: inherit; }
+
+        .post-body {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: var(--text-color);
+        }
+
+        .post-body p {
+            margin-bottom: 1.2em;
+        }
+
+        .post-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .post-body blockquote {
+            border-left: 2px solid var(--petal);
+            margin: 1.5em 0;
+            padding: 12px 24px;
+            font-style: italic;
+            color: var(--accent);
+            background: rgba(252, 232, 230, 0.3);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .post-photo img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            display: block;
+        }
+
+        .post-photo {
+            margin: -40px -44px 24px;
+            border-radius: 4px 4px 0 0;
+            overflow: hidden;
+        }
+
+        .post-caption {
+            font-style: italic;
+        }
+
+        .post-quote-text {
+            font-family: 'Special Elite', monospace;
+            font-size: 1.3em;
+            line-height: 1.7;
+            color: var(--title-color);
+            text-align: center;
+            padding: 20px 0;
+            letter-spacing: 1px;
+        }
+
+        .post-quote-text::before {
+            content: '\201C';
+            display: block;
+            font-size: 3em;
+            color: var(--petal);
+            opacity: 0.4;
+            line-height: 0.5;
+            margin-bottom: 16px;
+        }
+
+        .post-quote-source {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.85em;
+            color: var(--accent);
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .post-quote-source::before {
+            content: '\2014\00a0';
+        }
+
+        .post-tags {
+            margin-top: 24px;
+            padding-top: 16px;
+            border-top: 1px dashed var(--border);
+        }
+
+        .post-tags a {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 0.8em;
+            color: var(--accent);
+            margin-right: 12px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .post-tags a::before {
+            content: '#';
+        }
+
+        .post-tags a:hover {
+            opacity: 1;
+        }
+
+        .post-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            color: var(--accent);
+            opacity: 0.6;
+        }
+
+        .post-footer a { color: inherit; }
+        .post-footer a:hover { opacity: 1; }
+
+        .post-actions {
+            display: flex;
+            gap: 16px;
+        }
+
+        #pagination {
+            text-align: center;
+            padding: 40px 20px 60px;
+            font-family: 'Special Elite', monospace;
+            letter-spacing: 4px;
+            font-size: 0.9em;
+        }
+
+        #pagination a {
+            color: var(--accent);
+            padding: 8px 20px;
+            border: 1px solid var(--border);
+            border-radius: 4px;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        #pagination a:hover {
+            background: var(--floral-blush);
+            border-color: var(--petal);
+        }
+
+        .page-number {
+            color: var(--accent);
+            opacity: 0.5;
+            font-size: 0.85em;
+        }
+
+        #footer {
+            text-align: center;
+            padding: 30px 20px 50px;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.75em;
+            letter-spacing: 3px;
+            color: var(--accent);
+            opacity: 0.5;
+        }
+
+        #footer a { color: inherit; }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ::selection {
+            background: var(--floral-pink);
+            color: var(--title-color);
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--petal); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+        @media (max-width: 768px) {
+            #blog-title { font-size: 2em; letter-spacing: 3px; }
+            .post { padding: 28px 24px; margin-bottom: 36px; }
+            .post::before { left: 36px; }
+            .post-photo { margin: -28px -24px 20px; }
+            .post-title { font-size: 1.3em; }
+            .post-quote-text { font-size: 1.1em; }
+            nav a { margin: 0 8px; font-size: 0.8em; }
+            #content { padding: 0 16px 40px; }
+        }
+
+        @media (max-width: 480px) {
+            #blog-title { font-size: 1.6em; letter-spacing: 2px; }
+            .diary-subtitle { font-size: 0.95em; }
+            .post { padding: 24px 20px; }
+            .post::before { display: none; }
+            .post-photo { margin: -24px -20px 16px; }
+        }
+
+        /* Preview banner */
+        .preview-banner {
+            background: linear-gradient(135deg, var(--petal), var(--accent));
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-family: 'Special Elite', monospace;
+            font-size: 0.8em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="preview-banner">anteprima tema tumblr &mdash; diario digitale</div>
+
+    <header id="header">
+        <div class="diary-flower">&#10047; &#10047; &#10047;</div>
+        <h1 id="blog-title"><a href="#">To Hope</a></h1>
+        <p class="diary-subtitle">un diario digitale</p>
+        <p id="description">Pensieri sparsi, ricordi e piccoli momenti di bellezza raccolti tra le pagine di questo diario.</p>
+        <div class="divider">&#10047;</div>
+        <nav>
+            <a href="#">diario</a>
+            <a href="#">archivio</a>
+            <a href="#">scrivimi</a>
+        </nav>
+    </header>
+
+    <main id="content">
+
+        <!-- Text Post -->
+        <article class="post">
+            <div class="post-date"><a href="#">3 Maggio 2026</a></div>
+            <h2 class="post-title"><a href="#">Lettere che non spedir&ograve; mai</a></h2>
+            <div class="post-body">
+                <p>Ci sono parole che rimangono incastrate tra i pensieri, troppo fragili per essere pronunciate, troppo importanti per essere dimenticate. Le scrivo qui, su queste pagine invisibili, dove il vento non pu&ograve; portarle via.</p>
+                <p>Oggi il cielo era di quel rosa che sembra dipinto a mano, come se qualcuno avesse versato acquarello tra le nuvole. Ho pensato a te, a come avresti sorriso vedendolo.</p>
+                <blockquote>To hope is not to escape the difficult, but to be able to move forward with courage despite the difficult.</blockquote>
+            </div>
+            <div class="post-tags">
+                <a href="#">pensieri</a>
+                <a href="#">lettere</a>
+                <a href="#">speranza</a>
+            </div>
+            <div class="post-footer">
+                <span>12 note</span>
+                <div class="post-actions">
+                    <a href="#">reblog</a>
+                    <a href="#">&infin;</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Photo Post -->
+        <article class="post">
+            <div class="post-date"><a href="#">1 Maggio 2026</a></div>
+            <div class="post-photo">
+                <img src="https://images.unsplash.com/photo-1490750967868-88aa4f44baee?w=700&q=80" alt="Fiori rosa">
+            </div>
+            <div class="post-body post-caption">
+                <p>I fiori che ho trovato stamattina al mercato. Profumano di primavera e di promesse.</p>
+            </div>
+            <div class="post-tags">
+                <a href="#">fiori</a>
+                <a href="#">primavera</a>
+                <a href="#">bellezza</a>
+            </div>
+            <div class="post-footer">
+                <span>28 note</span>
+                <div class="post-actions">
+                    <a href="#">reblog</a>
+                    <a href="#">&infin;</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Quote Post -->
+        <article class="post">
+            <div class="post-date"><a href="#">28 Aprile 2026</a></div>
+            <div class="post-quote-text">To hope is not to escape the difficult, but to be able to move forward with courage despite the difficult.</div>
+            <div class="post-quote-source">Ocean Fernandez</div>
+            <div class="post-tags">
+                <a href="#">citazioni</a>
+                <a href="#">speranza</a>
+                <a href="#">coraggio</a>
+            </div>
+            <div class="post-footer">
+                <span>45 note</span>
+                <div class="post-actions">
+                    <a href="#">reblog</a>
+                    <a href="#">&infin;</a>
+                </div>
+            </div>
+        </article>
+
+        <!-- Another Text Post -->
+        <article class="post">
+            <div class="post-date"><a href="#">25 Aprile 2026</a></div>
+            <h2 class="post-title"><a href="#">Piccoli rituali</a></h2>
+            <div class="post-body">
+                <p>Ho iniziato a raccogliere petali di fiori tra le pagine dei libri. Non per conservarli, ma per ritrovarli quando meno me lo aspetto &mdash; piccole sorprese dal passato, messaggi che mi mando dal presente al futuro.</p>
+                <p>Il t&egrave; della sera ha un sapore diverso quando lo bevi guardando il tramonto. Ogni sorso &egrave; un respiro, ogni respiro &egrave; una preghiera silenziosa.</p>
+            </div>
+            <div class="post-tags">
+                <a href="#">rituali</a>
+                <a href="#">quotidianit&agrave;</a>
+                <a href="#">pace</a>
+            </div>
+            <div class="post-footer">
+                <span>8 note</span>
+                <div class="post-actions">
+                    <a href="#">reblog</a>
+                    <a href="#">&infin;</a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <div id="pagination">
+        <a href="#">&larr; prima</a>
+        <span class="page-number">1 / 5</span>
+        <a href="#">dopo &rarr;</a>
+    </div>
+
+    <footer id="footer">
+        <p>&ldquo;to hope is not to escape the difficult&rdquo;</p>
+        <p><a href="#">tumblr</a></p>
+    </footer>
+
+</body>
+</html>
