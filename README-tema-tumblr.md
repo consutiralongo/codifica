@@ -1,14 +1,25 @@
 # To Hope — Tema Tumblr Diario Digitale
 
-Un tema Tumblr ispirato all'estetica ["To Hope" di Ocean Fernandez](https://dribbble.com/shots/24539225-To-Hope).
+Tema Tumblr basato su [Lilac di seyche](https://seyche.tumblr.com), con una pagina di benvenuto statica ispirata all'estetica ["To Hope" di Ocean Fernandez](https://dribbble.com/shots/24539225-To-Hope).
 
-## Estetica
+## Struttura
 
-- **Palette**: Rosa tenue, blush, crema, salvia — tonalità morbide e sognanti
-- **Tipografia**: `Special Elite` (stile macchina da scrivere) per titoli e date, `Cormorant Garamond` (serif elegante) per il corpo del testo
-- **Elementi decorativi**: Fiori stilizzati, bordi tratteggiati, ombreggiature delicate
-- **Layout**: Stile pagina di diario con effetto carta, angoli piegati, linea margine
-- **Animazioni**: Fade-in morbido dei post, transizioni delicate sui link
+- `tumblr-theme.html` — Il tema Tumblr completo (Lilac + landing page "To Hope")
+- `preview.html` — Anteprima statica con contenuti di esempio
+- `README-tema-tumblr.md` — Questa documentazione
+
+## Landing Page "To Hope"
+
+Quando un visitatore arriva sulla pagina principale del blog, viene accolto da una pagina statica a schermo intero con:
+
+- **Sfondo** rosa tenue con sfumature sognanti e blob animati
+- **Titolo** del blog in font macchina da scrivere (Special Elite)
+- **Descrizione** del blog in corsivo elegante (Cormorant Garamond)
+- **Citazione** "To hope is not to escape the difficult, but to be able to move forward with courage despite the difficult."
+- **Pulsante** "Entra nel diario" che dissolve la landing page e rivela il blog
+- **Elementi decorativi** floreali con animazioni sfalsate
+
+La landing page appare solo sulla pagina principale (index). Le pagine di tag, ricerca e permalink mostrano direttamente il blog.
 
 ## Come usare
 
@@ -17,44 +28,34 @@ Un tema Tumblr ispirato all'estetica ["To Hope" di Ocean Fernandez](https://drib
 3. Incolla il contenuto di `tumblr-theme.html`
 4. Salva
 
-## Personalizzazione
+## Personalizzazione del tema Lilac
 
-Il tema include opzioni personalizzabili direttamente da Tumblr:
+Il tema base include molte opzioni personalizzabili da Tumblr:
 
-| Opzione | Tipo | Default |
-|---------|------|---------|
-| `color:Background` | Colore | `#fef5f3` |
-| `color:Accent` | Colore | `#d4a0a0` |
-| `color:Title` | Colore | `#8b6f6f` |
-| `color:Text` | Colore | `#5a4a4a` |
-| `color:Link` | Colore | `#c48b8b` |
-| `text:Diary subtitle` | Testo | `a digital diary` |
-
-## Tipi di post supportati
-
-- Testo (con titolo e blockquote)
-- Foto e Photoset
-- Citazioni
-- Link
-- Chat
-- Audio
-- Video
-- Risposte (Ask)
-
-## Navigazione
-
-- **Diario** — pagina principale
-- **Archivio** — archivio del blog
-- **Scrivimi** — pagina ask (se abilitata)
-- **Invia** — submissions (se abilitate)
+| Opzione | Default |
+|---------|---------|
+| `color:Background` | `#f0f0f0` |
+| `color:Posts` | `#ffffff` |
+| `color:Accent` | `#9fa8da` |
+| `color:Gradient 1` | `#7986cb` |
+| `color:Gradient 2` | `#e1bee7` |
+| `color:Title` | `#212121` |
+| Font | Public Sans (selezionabile) |
+| Dimensione font | 14px (selezionabile) |
+| Larghezza post | 540px (selezionabile) |
 
 ## Anteprima
 
-Apri `preview.html` nel browser per vedere un'anteprima del tema con contenuti di esempio.
+Apri `preview.html` nel browser per vedere l'esperienza completa: landing page → blog.
 
 ## Responsive
 
-Il tema è completamente responsive e si adatta a dispositivi mobile, tablet e desktop.
+Il tema e la landing page sono completamente responsive per mobile, tablet e desktop.
+
+## Crediti
+
+- **Lilac theme** by [seyche](https://seyche.tumblr.com)
+- **Landing page** ispirata a ["To Hope" di Ocean Fernandez](https://dribbble.com/shots/24539225-To-Hope)
 
 ---
 
